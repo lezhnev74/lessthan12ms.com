@@ -17,7 +17,7 @@ function container(): \Psr\Container\ContainerInterface
     if (env('APP_ENV') !== 'local') {
         $builder->enableCompilation(base_path() . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'tmp');
     }
-    $builder->addDefinitions(base_path() . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'infrastructure' . DIRECTORY_SEPARATOR . 'dependencies.php');
+    $builder->addDefinitions(base_path() . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Infrastructure' . DIRECTORY_SEPARATOR . 'dependencies.php');
     return $builder->build();
 }
 

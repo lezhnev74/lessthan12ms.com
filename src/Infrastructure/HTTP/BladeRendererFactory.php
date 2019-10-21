@@ -33,7 +33,7 @@ class BladeRendererFactory
     {
         $views = base_path() . DIRECTORY_SEPARATOR . '/storage' . DIRECTORY_SEPARATOR . 'views'; // to read the templates
         $cache = base_path() . DIRECTORY_SEPARATOR . '/storage' . DIRECTORY_SEPARATOR . 'cache'; // to compile the result
-        $mode = (env('APP_ENV') !== 'prod') ? BladeOne::MODE_SLOW : BladeOne::MODE_FAST;
+        $mode = (env('APP_ENV') !== 'production') ? BladeOne::MODE_SLOW : BladeOne::MODE_FAST;
         return new BladeOne($views, $cache, $mode);
     }
 
