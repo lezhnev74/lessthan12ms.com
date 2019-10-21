@@ -90,9 +90,11 @@ class Symlinker
             $name = sprintf('%s.%s', crc32($link), pathinfo($link, PATHINFO_EXTENSION));
             $webLink = $this->webrootPath . DIRECTORY_SEPARATOR . 'linked' . DIRECTORY_SEPARATOR . $name;
             $linkFullPath = realpath($postFolder . DIRECTORY_SEPARATOR . $link);
+            $webLinkFolder = dirname($webLink);
+            $linkRelativePath = relativePath($webLinkFolder, $linkFullPath);
 
             if (!file_exists($webLink)) {
-                symlink($linkFullPath, $webLink);
+                `cd $webLinkFolder $webLinkFolder && ln -sr $linkRelativePath $webLink`;
             }
             $symlinks[$link] = DIRECTORY_SEPARATOR . relativePath($this->webrootPath, $webLink);
         }

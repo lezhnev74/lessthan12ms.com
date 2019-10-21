@@ -9,7 +9,7 @@
     @include('comments')
 @endsection
 @section('footer')
-    <link rel="stylesheet" href="/js/highlight/styles/Idea.css">
+    <link rel="stylesheet" href="/js/highlight/styles/idea.css">
     <script src="/js/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 @append
