@@ -1,0 +1,104 @@
+* {
+    font-family: Merriweather, Georgia, serif;
+    font-weight: 300;
+}
+
+.content {
+    line-height: 1.73333em;
+    font-size: 1.18em;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.73333em;
+    margin-top: 100px;
+}
+h4, h5 {
+    color:gray;
+}
+
+b, strong {font-weight: 700;}
+
+li { margin-bottom: 10px; }
+
+.post {
+    color: #2e2f3e;
+}
+.post img {
+    max-width: 1000px;
+}
+
+.post h1, .post h2, .post h3, .post h4, .post li, .post p {
+    max-width: 50ch;
+}
+
+.post .anchor {
+    color: red;
+}
+
+.post code, .post code * {
+    font-family: "Hack", "Courier New", Courier, monospace;
+    font-size: 12px;
+    line-height: 1.4em;
+}
+.post code {
+    padding: 0.5em;
+    color: #333;
+    background: #f8f8f8;
+}
+
+.date {
+    color: gray;
+}
+
+.menu {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.menu .date {
+    font-size: 0.8em;
+}
+
+.aboutme {
+
+}
+
+.aboutme .me {
+    font-size:0.7em;
+    color:gray;
+    line-height: 1.3em;
+}
+.aboutme .my_stack img {
+    height: 20px;
+    width: auto;
+    margin: 0 10px 5px 0;
+}
+
+.footer {
+    font-size:0.7em;
+    color:gray;
+}
+.social a img {
+    width:25px;
+    height:auto;
+    margin:0 10px 0 0;
+}
+
+blockquote {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    padding: .25rem 0 .25rem 1.5rem;
+    position: relative;
+}
+blockquote::before {
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #c2c2c2;
+    border-radius: 4px;
+}
+
+#disqus_thread { max-width: 30em;}

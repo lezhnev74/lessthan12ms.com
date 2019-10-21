@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+#
+# ./develop
+#   This is a helper script that wraps the typical commands you will execute on the Docker container. It saves the developer
+#   from needing to explicitly run the commands through docker-compose.
+#
+#   See the comments in the script below for more detailed information.
+#
+
+# Create docker-compose command to run
+COMPOSE="docker-compose"
+
+# If we pass any arguments...
+if [ $# -gt 0 ];then
+    # If "composer" is used, pass-thru to "composer"
+    # inside a new container
+    if [ "$1" == "composer" ]; then
+        shift 1
+        $COMPOSE run --rm \
+            -w /var/www \
+            app \
+            composer "$@"
+
+    # If "serve" is used, run built-in webserver,
+    # and expose it on the APP_PORT
+    elif [ "$1" == "serve" ]; then
+        shift 1
+        $COMPOSE run --service-ports --rm \
+            -w /var/www \
+            app \
+            php -S 0.0.0.0:80 -t ./web "$@"
+
+    # If "test" is used, run unit tests,
+    # pass-thru any extra arguments to phpunit
+    elif [ "$1" == "test" ]; then
+        shift 1
+        $COMPOSE run --rm \
+            -w /var/www \
+            app \
+            php -dxdebug.remote_autostart=1 ./vendor/bin/phpunit "$@" --testdox
+
+    # If "php" is used, run php interpreter,
+    # pass-thru any extra arguments to php
+    elif [ "$1" == "php" ]; then
+        shift 1
+        $COMPOSE run --rm \
+            -w /var/www \
+            app \
+            php "$@"
+
+    # Else, pass-thru args to docker-compose
+    else
+        $COMPOSE "$@"
+    fi
+
+else
+    $COMPOSE ps
+fi

@@ -1,0 +1,45 @@
+{
+  "name": "lezhnev74/textsite",
+  "description": "A text website engine made for easy IDE driven publishing",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitriy Lezhnev",
+      "email": "lezhnev.work@gmail.com"
+    }
+  ],
+  "require": {
+    "nesbot/carbon": "^2.25",
+    "league/commonmark": "^1.0",
+    "slim/slim": "^4.3",
+    "nyholm/psr7": "^1.2",
+    "nyholm/psr7-server": "^0.3.0",
+    "php-di/php-di": "^6.0",
+    "vlucas/phpdotenv": "^3.6",
+    "phlak/config": "^6.0",
+    "monolog/monolog": "^2.0",
+    "eftec/bladeone": "^3.31",
+    "voku/html-min": "^4.0",
+    "ocramius/proxy-manager": "~2.0",
+    "cocur/slugify": "^3.2",
+    "mibe/feedwriter": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Textsite\\": "src/"
+    },
+    "files": [
+      "src/Infrastructure/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "^8"
+  }
+}

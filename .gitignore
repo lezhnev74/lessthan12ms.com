@@ -1,0 +1,9 @@
+.idea
+vendor
+.env
+web/cache/*
+web/linked/*
+tests/stub/web/*
+.phpunit*
+storage/cache/
+storage/log.log

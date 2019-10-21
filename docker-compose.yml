@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  app:
+    container_name: textsite_app
+    build:
+      context: ./docker/php
+    volumes:
+      - .:/var/www:delegated
+    ports:
+      - "8887:80"
+    networks:
+      - net
+networks:
+  net:
+    driver: "bridge"
