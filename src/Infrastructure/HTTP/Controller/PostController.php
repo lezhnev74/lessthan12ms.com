@@ -54,7 +54,7 @@ class PostController
         // 3. Render the view with the view model
         $viewModel = [
             'title' => $post->title(),
-            'date' => $post->publishDate()->format('D, d M Y'),
+            'date' => $post->publishDate()->format('D, j M Y'),
             'body' => $postHtml,
             'slug' => $post->slug(),
             'url' => $this->app->getRouteCollector()->getRouteParser()

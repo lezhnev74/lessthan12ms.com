@@ -45,7 +45,7 @@ class BladeRendererFactory
             return [
                 'title' => $post->title(),
                 'url' => $routeParser->urlFor('post', ['slug' => $post->slug()]),
-                'date' => $post->publishDate()->format('D, d M Y')
+                'date' => $post->publishDate()->format('D, j M Y')
             ];
         }, $this->posts->getAllPostsOrderByDate());
         $renderer->share('postLinks', $postLinks);
