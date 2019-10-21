@@ -9,7 +9,7 @@
 #
 
 # Create docker-compose command to run
-COMPOSE="docker-compose"
+COMPOSE="docker-compose -f docker-compose.dev.yml"
 
 # If we pass any arguments...
 if [ $# -gt 0 ];then
