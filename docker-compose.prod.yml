@@ -3,6 +3,7 @@ services:
   app:
     container_name: textsite_app
     image: php:7.4.0RC4-fpm
+    restart: unless-stopped
     volumes:
       - .:/var/www:delegated
     ports:
