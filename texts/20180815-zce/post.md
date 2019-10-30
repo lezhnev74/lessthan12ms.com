@@ -7,6 +7,8 @@ date: Aug 15, 2018 09:40
 - Yesterday [I have passed](http://www.zend.com/en/yellow-pages/ZEND031138) the Zend Certified Engineer exam.
 - It took roughly a year for me to feel confident enough to actually take the exam.
 
+![](https://lessthan12ms.com/wp-content/uploads/2018/08/zend-05.jpg)
+
 ## What I've learned
 I must say that I've been doing stuff with PHP for long years and I felt that I am good at it. But still, many PHP details and features were not discovered.
 
@@ -29,7 +31,7 @@ I tried different styles of preparation. This one worked for me:
 One day I felt that it was enough studying and I must go and give it a try.
 A good night sleep and some caffeine (some people use Cola, but I prefer actual coffee) served me well.
 
-<a href="https://lessthan12ms.com/wp-content/uploads/2018/08/zend-04.jpg"><img title="Exam Subjects" src="https://lessthan12ms.com/wp-content/uploads/2018/08/zend-04-225x300.jpg" alt="" width="225" height="300" class="aligncenter size-medium wp-image-875" /></a>
+![](https://lessthan12ms.com/wp-content/uploads/2018/08/zend-04.jpg)
 
 ## References
 - [Zend certification programs](http://www.zend.com/en/services/certification)
