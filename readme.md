@@ -11,3 +11,10 @@ Features:
 ## Locally
 - `./develop serve tests/Infrastructure/HTTP/router.php` to start a built in web server
 - `./develop test` to run tests
+
+## Deployment
+Deployment is done in steps:
+- setup webserver and create a folder for the website
+- run `php deploy.php` to download the repo
+- create and set values in `.env` file
+- add github webhook to react on new pushes, make it run this command on each new push `php deploy.php`
