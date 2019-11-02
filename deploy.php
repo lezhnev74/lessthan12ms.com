@@ -12,5 +12,6 @@ chdir(base_path());
 // and now wipe out the cache
 `rm -rf ./web/cache/*`;
 
+`docker exec -it textsite_app /bin/bash -c "cd /var/www && composer install"`;
 `docker-compose -f docker-compose.prod.yml restart app`;
 // Done!
