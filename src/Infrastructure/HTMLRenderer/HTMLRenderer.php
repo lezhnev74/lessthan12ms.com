@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Textsite\Infrastructure\HTMLRenderer;
 
 use Cocur\Slugify\Slugify;
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\ConverterInterface;
+use Stringy\Stringy;
 use Textsite\Domain\MarkdownPost;
 
 /**
@@ -13,43 +14,70 @@ use Textsite\Domain\MarkdownPost;
  */
 class HTMLRenderer
 {
+    /** @var ConverterInterface */
+    private $converter;
+
+    public function __construct(ConverterInterface $converter) { $this->converter = $converter; }
+
+
     public function render(MarkdownPost $post): string
     {
-        $converter = new CommonMarkConverter([
-            'renderer' => [
-                'block_separator' => "\n",
-                'inner_separator' => "\n",
-                'soft_break'      => "<br>\n",
-            ],
-        ]);
-        $html = $converter->convertToHtml($post->text());
-        $html = $this->addAnchors($html);
+        $html = $this->converter->convertToHtml($post->text());
+        [$html, $anchors] = $this->addAnchors($html);
+        $html = $this->addTableContent($html, $anchors);
         return $html;
     }
 
     /**
      * Add HTML <a> anchors to each H-level node
      */
-    private function addAnchors(string $html): string
+    private function addAnchors(string $html): array
     {
-        if (!preg_match_all('#(<h\d>)(([^<]+)</h\d>)#i', $html, $matches, PREG_SET_ORDER)) {
-            return $html;
+        if (!preg_match_all('#(<h(\d)>)(([^<]+)</h\d>)#i', $html, $matches, PREG_SET_ORDER)) {
+            return [$html, []];
         }
+
+        $anchors = [];
         foreach ($matches as $m) {
             // matches:
             //0 = "<h1>Title</h1>"
             //1 = "<h1>"
-            //2 = "Title</h1>"
-            //3 = "Title"
-            $id = (new Slugify())->slugify($m[3]);
+            //2 = "1"
+            //3 = "Title</h1>"
+            //4 = "Title"
+            $id = (new Slugify())->slugify($m[4]);
             $anchor = sprintf('<a class="anchor" href="#%s">#</a> ', $id);
             $html = str_replace(
                 [$m[0], '>' . $anchor],
-                [$m[1] . $anchor . $m[2], sprintf(' id="%s" >', $id) . $anchor],
+                [$m[1] . $anchor . $m[3], sprintf(' id="%s" >', $id) . $anchor],
                 $html
             );
+
+            $anchors[] = [
+                'slug' => $id,
+                'title' => $m[4],
+                'level' => $m[2]
+            ];
         }
 
-        return $html;
+        return [$html, $anchors];
+    }
+
+    private function addTableContent(string $html, array $anchors): string
+    {
+        $toc = '<div id="toc"><p>Table of Contents</p><ul>';
+
+        foreach ($anchors as $i => $a) {
+            if (!$i) continue;
+            $off = ($a['level']-2) * 40;
+            $toc .= '<li style="margin-left:'.$off.'px;">' .
+                '<a href="#' . $a['slug'] . '">' .
+                $a['title'] .
+                '</a></li>';
+        }
+
+        $toc .= '</ul></div>';
+
+        return (string)Stringy::create($html)->replace('</h1>', '</h1>' . $toc);
     }
 }

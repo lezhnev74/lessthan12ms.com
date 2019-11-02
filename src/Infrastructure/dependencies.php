@@ -1,5 +1,9 @@
 <?php
 
+use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
+use Webuni\CommonMark\AttributesExtension\AttributesExtension;
+
 return [
     \Slim\App::class => function (\Psr\Container\ContainerInterface $container) {
         $app = \Slim\Factory\AppFactory::create(null, $container);
@@ -55,5 +59,16 @@ return [
     },
     \Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware::class => function () {
         return new \Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware(config('webroot_path'));
+    },
+    \League\CommonMark\ConverterInterface::class => function(){
+        $environment = Environment::createCommonMarkEnvironment();
+        $environment->addExtension(new AttributesExtension());
+        return new CommonMarkConverter([
+            'renderer' => [
+                'block_separator' => "\n",
+                'inner_separator' => "\n",
+                'soft_break'      => "<br>\n",
+            ],
+        ], $environment);
     },
 ];

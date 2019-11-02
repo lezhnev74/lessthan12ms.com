@@ -23,7 +23,9 @@
     "voku/html-min": "^4.0",
     "ocramius/proxy-manager": "~2.0",
     "cocur/slugify": "^3.2",
-    "mibe/feedwriter": "^1.1"
+    "mibe/feedwriter": "^1.1",
+    "webuni/commonmark-attributes-extension": "^1.0",
+    "danielstjules/stringy": "^3.1"
   },
   "autoload": {
     "psr-4": {
@@ -40,6 +42,7 @@
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
-    "phpunit/phpunit": "^8"
+    "phpunit/phpunit": "^8",
+    "paquettg/php-html-parser": "^2.1"
   }
 }
