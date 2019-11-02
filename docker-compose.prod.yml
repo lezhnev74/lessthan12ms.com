@@ -2,7 +2,8 @@ version: '3.7'
 services:
   app:
     container_name: textsite_app
-    image: php:7.4.0RC4-fpm
+    build:
+      context: ./docker/php.prod
     restart: unless-stopped
     volumes:
       - .:/var/www:delegated
