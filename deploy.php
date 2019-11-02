@@ -6,11 +6,11 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autolo
  */
 
 chdir(base_path());
-`composer install`;
 `git fetch --all`; // this fetches all the updates
 `git reset --hard origin/master`; // this would drop local changes if any
 
 // and now wipe out the cache
 `rm -rf ./web/cache/*`;
 
+`docker-compose -f docker-compose.prod.yml restart app`;
 // Done!
