@@ -41,3 +41,4 @@ A good night sleep and some caffeine (some people use Cola, but I prefer actual 
 - [Joshua Thijssen's book](https://www.phparch.com/books/mastering-the-spl-library/)
 - [Zend Certifications Tips & Tricks](https://7php.com/zend-certification-advice-michelangelo-van-dam/)
 - [A playground](http://3v4l.org)
+- [Formal PHP Specification](https://github.com/php/php-langspec)

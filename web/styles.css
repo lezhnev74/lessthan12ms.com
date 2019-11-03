@@ -44,6 +44,27 @@ li { margin-bottom: 10px; }
     color:gray;
 }
 
+.post .table-wrapper {
+    overflow-x:auto;
+}
+.post table {
+    min-width:800px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border:1px gray;
+}
+.post table thead {
+    background-color: #fde9d9;
+}
+
+.post table td, th {
+    padding: 10px 20px;
+}
+
+.post table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
 .post code, .post code * {
     font-family: "Hack", "Courier New", Courier, monospace;
     font-size: 12px;
