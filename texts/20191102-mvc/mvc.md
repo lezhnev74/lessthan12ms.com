@@ -1,5 +1,5 @@
 slug: mvc 
-date: 10 Nov 2019, 12:00
+date: 5 Nov 2019, 08:00
 # MVC and the Web
 I am trying to use words correctly. At some point, I realized that the term MVC is a bit obscure to me. Let's find out
 what it is together. 
