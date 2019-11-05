@@ -7,27 +7,28 @@ what it is together.
 The term MVC is essential for us web developers. But what does it mean? Where did it come from? How to use it properly?
 
 ## The Origins Of The Term
-In the late 70s (as well as now) developers tried to come up with a practical design solution that would allow them
-to maintain software systems. MVC is one of the ideas. Back then it was a way to write maintainable GUI based desktop
-software. It decouples UI from the domain logic, and within UI it decouples output from input (rendering from the reaction).
-
-> At the heart of MVC, and the idea that was the most influential to later frameworks, is what I call Separated
-> Presentation. The idea behind Separated Presentation is to make a clear division between domain objects that model our
-> perception of the real world, and presentation objects that are the GUI elements we see on the screen. 
-— [GUI Architectures by M.Fowler](https://martinfowler.com/eaaDev/uiArchs.html)
+In the late 70s (as well as now) developers tried to come up with a practical design solution that would allow them to
+maintain software systems. MVC is one of the ideas. Back then it was a way to write maintainable GUI based desktop
+software. It decouples UI from the domain logic, and within UI it decouples output from input (presenting from
+reacting).
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/77/Trygve_Reenskaug_%282010%29.jpg){style="max-width:100px;text-align:center;"}
 
 The idea was coined by **[Trygve Reenskaug](https://www.wikiwand.com/en/Trygve_Reenskaug)** around 1979.
 
 > He formulated the model–view–controller (MVC) **pattern for graphical user interface (GUI) software design** in 1979
-> while visiting the Xerox Palo Alto Research Center (PARC).
+> while visiting the Xerox Palo Alto Research Center (PARC). 
+
 — According to Wikipedia.
 
+Initially, the pattern set rules for designing real-time applications running on desktops.
 
-### MVC Is A Design Pattern For Desktop GUI Applications
-Initially, the pattern set rules for designing real-time applications running on desktops. Let's review how it helped
-developers.
+> At the heart of MVC, and the idea that was the most influential to later frameworks, is what I call Separated
+> Presentation. The idea behind Separated Presentation is to make a clear division between domain objects that model our
+> perception of the real world, and presentation objects that are the GUI elements we see on the screen. 
+
+— [GUI Architectures by M.Fowler](https://martinfowler.com/eaaDev/uiArchs.html)
+
 
 ### Model 
 The Model is an abstraction that represents objects of the business, the real world things (think of bank accounts,
@@ -38,10 +39,10 @@ The model does not know about the UI. It knows nothing about how we present it t
 colors, screens, keyboards, etc. Only core business rules matter here.
 
 ### View And Controller
-The view is an abstraction that shows the model to the end-user. It renders somehow the model's data on the visual medium. The view
-always represents the actual state of the model. So if at any moment the model changed, the view changed. To achieve
-that the View would subscribe to the changes of the model (think of Observer pattern). As you can see it is a real-time
-communication, a stateful system.
+The view is an abstraction that shows the model to the end-user. It renders somehow the model's data on the visual
+medium. The view always represents the actual state of the model. So if at any moment the model changed, the view
+changed. To achieve that the View would subscribe to the changes of the model (think of Observer pattern). As you can
+see it is a real-time communication, a stateful system.
 
 The view uses Controller to react to the user input. It delegates a reaction strategy to controllers. This is done
 intentionally to decouple responsibilities. The view can switch controllers to change the behavior at any time (see
@@ -76,6 +77,7 @@ the Web.**
 > logic necessary to obtain the correct content for display. It then places the content in the request (commonly in the
 > form of a JavaBean or POJO) and decides which view it will pass the request to. The view then renders the content
 > passed by the controller. 
+
 — Wikipedia
 
 ![](./model2.jpg)
@@ -106,7 +108,7 @@ Even though the terms sound the same, their roles are different.
     </table>
 </div>
 
-## Modern Web Development
+## MVC In The Modern Web Development
 Modern frameworks for the Web, starting from Apache Struts, down to Ruby on Rails and PHP Laravel. All incorporate ideas
 described in JSP Specification 0.92. The problem that Model2 solves is the same as MVC but applied to the distributed world
 of the Web. 

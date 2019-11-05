@@ -13,6 +13,6 @@ chdir(base_path());
 `rm -rf ./web/cache/*`;
 
 `docker-compose -f docker-compose.prod.yml build app`;
-`docker exec -it textsite_app /bin/bash -c "cd /var/www && composer install"`;
+`docker-compose -f docker-compose.prod.yml run app /bin/bash -c "cd /var/www && composer install"`;
 `docker-compose -f docker-compose.prod.yml restart app`;
 // Done!
