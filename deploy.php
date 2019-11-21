@@ -12,7 +12,7 @@ chdir(base_path());
 // and now wipe out the cache
 `rm -rf ./web/cache/*`;
 
-`docker-compose -f docker-compose.prod.yml build app`;
-`docker-compose -f docker-compose.prod.yml run app /bin/bash -c "cd /var/www && composer install"`;
-`docker-compose -f docker-compose.prod.yml restart app`;
+`sudo docker-compose -f docker-compose.prod.yml build app`;
+`sudo docker-compose -f docker-compose.prod.yml run app /bin/bash -c "cd /var/www && composer install"`;
+`sudo docker-compose -f docker-compose.prod.yml restart app`;
 // Done!

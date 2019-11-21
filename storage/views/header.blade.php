@@ -9,7 +9,7 @@
     <div class="textwidget">
         <div class="me">
             by 🇷🇺 Dmitry Lezhnev<br>
-            Backend engineer<br>
+            Web Backend Developer<br>
             PHP/<a href="https://lemp.io/">LEMP-stack</a> practitioner<br>
             <a href="http://www.zend.com/en/yellow-pages/ZEND031138">Zend Certified Engineer</a><br>
             <a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
