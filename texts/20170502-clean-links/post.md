@@ -35,6 +35,7 @@ In this post I will maintain the list of blog posts. projects and related things
 * **[Robert C Martin - Clean Architecture and Design](https://www.youtube.com/watch?v=Nsjsiz2A9mg) - I've been coming back to this video again and again.**
 * **[What went wrong with the IT-industry? - James Coplien](https://www.youtube.com/watch?v=gPP7Bleg214)**
 * **[DevTernity 2017: Ian Cooper - TDD, Where Did It All Go Wrong](https://www.youtube.com/watch?v=EZ05e7EMOLM)**
+* [The Future of Programming by R.Martin](https://www.youtube.com/watch?v=BHnMItX2hEQ)
 * [Kill "Microservices" before its too late by Chad Fowler](https://www.youtube.com/watch?v=-UKEPd2ipEk)
 * [Gordon Skinner - Hexagonal Architecture in DDD](https://www.youtube.com/watch?v=u6oTg5oRH24)
 * [Is TDD dead?](https://www.youtube.com/playlist?list=PLJb2p0qX8R_qSRhs14CiwKuDuzERXSU8m). Clean architecture inspires developer to have testable isolated chunks of code, so TDD ussually complement clean architecture. Worth watching!
