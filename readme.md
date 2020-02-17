@@ -11,6 +11,7 @@ Features:
 ## Locally
 - `./develop serve tests/Infrastructure/HTTP/router.php` to start a built in web server
 - `./develop test` to run tests
+- `./develop composer update` to update dependencies
 
 ## Deployment
 Deployment is done in steps:
