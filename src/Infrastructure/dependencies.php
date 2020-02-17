@@ -8,8 +8,8 @@ return [
     \Slim\App::class => function (\Psr\Container\ContainerInterface $container) {
         $app = \Slim\Factory\AppFactory::create(null, $container);
         $app->addRoutingMiddleware();
-        $app->addMiddleware($container->get(\Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware::class));
         $app->addMiddleware(new \Textsite\Infrastructure\HTTP\Middleware\MinificationMiddleware());
+        $app->addMiddleware($container->get(\Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware::class));
         $app->add(new \Slim\Middleware\ContentLengthMiddleware());
         $errorMiddleware = $app->addErrorMiddleware(true, true, true);
         $errorMiddleware->setDefaultErrorHandler($container->get(\Textsite\Infrastructure\HTTP\ErrorHandler::class));
