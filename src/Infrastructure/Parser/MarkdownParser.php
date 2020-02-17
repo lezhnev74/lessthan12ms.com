@@ -32,12 +32,18 @@ final class MarkdownParser
         $title = $this->getTitleInBody($body);
         $slug = $this->parseMeta($meta, 'slug');
         $date = $this->parseMeta($meta, 'date');
+        try {
+            $unlisted = $this->parseMeta($meta, 'unlisted') === 'yes';
+        } catch (PostMetaStructureIncorrect $e) {
+            $unlisted = false;
+        }
 
         return new MarkdownPost(
             $title,
             $slug,
             CarbonImmutable::parse($date),
-            $body
+            $body,
+            $unlisted
         );
     }
 
@@ -51,7 +57,7 @@ final class MarkdownParser
 
     private function getTitleInBody(string $body): string
     {
-        if(!preg_match('#^\#([^\n$]+)#', $body, $p)) {
+        if (!preg_match('#^\#([^\n$]+)#', $body, $p)) {
             throw new IncorrectPostStructure('Unable to detect title in the body');
         }
         return trim($p[1]);

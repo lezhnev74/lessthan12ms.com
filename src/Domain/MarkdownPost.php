@@ -9,15 +9,17 @@ final class MarkdownPost
 {
     private string $title;
     private string $slug;
+    private bool $unlisted;
     private CarbonImmutable $publishDate;
     private string $text;
 
-    public function __construct(string $title, string $slug, CarbonImmutable $publishDate, string $text)
+    public function __construct(string $title, string $slug, CarbonImmutable $publishDate, string $text, bool $unlisted)
     {
         $this->title = $title;
         $this->slug = $slug;
         $this->publishDate = $publishDate;
         $this->text = $text;
+        $this->unlisted = $unlisted;
     }
 
 
@@ -36,10 +38,13 @@ final class MarkdownPost
         return $this->publishDate;
     }
 
+    public function unlisted(): bool
+    {
+        return $this->unlisted;
+    }
+
     public function text(): string
     {
         return $this->text;
     }
-
-
 }

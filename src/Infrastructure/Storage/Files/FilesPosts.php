@@ -21,7 +21,7 @@ final class FilesPosts implements Posts
      */
     public function getAllPostsOrderByDate(): array
     {
-        $posts = $this->getAllPosts();
+        $posts = array_filter($this->getAllPosts(), function (MarkdownPost $p) { return !$p->unlisted(); });
 
         usort($posts, function (MarkdownPost $a, MarkdownPost $b) {
             return $a->publishDate()->lte($b->publishDate());

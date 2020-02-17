@@ -8,8 +8,6 @@ use Textsite\Infrastructure\Storage\Files\FilesPosts;
 
 class FilesPostsTest extends Test
 {
-    private string $path;
-
     public function testGetAllPostsOrderByDate(): void
     {
         $repo = new FilesPosts($this->postsPath);
@@ -25,6 +23,14 @@ class FilesPostsTest extends Test
         $post = $repo->getPost('post-title-2');
         $this->assertNotNull($post);
         $this->assertEquals('Usecase Driven Development', $post->title());
+    }
+
+    public function testItReadsUnlistedPostBySlug(): void
+    {
+        $repo = new FilesPosts($this->postsPath);
+        $post = $repo->getPost('unlisted-post-title');
+        $this->assertNotNull($post);
+        $this->assertEquals('Hidden post', $post->title());
     }
 
     public function testItReturnsNullForNotFOundPost(): void
