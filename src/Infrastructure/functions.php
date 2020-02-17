@@ -1,6 +1,8 @@
 <?php
 
-function base_path(): string
+use Psr\Log\LoggerInterface;
+
+function base_path() : string
 {
     return realpath(
         __DIR__ . DIRECTORY_SEPARATOR
@@ -9,7 +11,7 @@ function base_path(): string
     );
 }
 
-function container(): \Psr\Container\ContainerInterface
+function container() : \Psr\Container\ContainerInterface
 {
     $builder = new \DI\ContainerBuilder();
     $builder->useAnnotations(false);
@@ -78,4 +80,9 @@ function relativePath($from, $to, $ps = DIRECTORY_SEPARATOR)
         array_shift($arTo);
     }
     return str_pad("", count($arFrom) * 3, '..' . $ps) . implode($ps, $arTo);
+}
+
+function logMessage(string $message, array $context = []) : void
+{
+    container()->get(LoggerInterface::class)->info($message, $context);
 }
