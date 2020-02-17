@@ -5,8 +5,6 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autolo
  * It should redeploy the website to catch up on new changes.
  */
 
-
-
 chdir(base_path());
 `git fetch --all`; // this fetches all the updates
 `git reset --hard origin/master`; // this would drop local changes if any
@@ -15,7 +13,4 @@ chdir(base_path());
 `rm -rf ./web/cache/*`;
 `rm -rf ./storage/tmp/*`;
 
-`sudo docker-compose -f docker-compose.prod.yml build app`;
-`sudo docker-compose -f docker-compose.prod.yml run app /bin/bash -c "cd /var/www && composer install"`;
-`sudo docker-compose -f docker-compose.prod.yml restart app`;
 // Done!
