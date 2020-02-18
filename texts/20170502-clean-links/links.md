@@ -1,9 +1,9 @@
 date:May 2, 2017 19:02
 slug: clean-architecture-links
 # Clean architecture links
-In this post I will maintain the list of blog posts. projects and related things which cover the whole Clean Architecture subject (aka onion architecture, hexagonal architecture or "ports and adapters". This list is language/framework agnostic. 
-
-**update 2018**: As of recently, I consider Event Sourcing as a way towards clean architecture, thats why I am including extra links about it.
+In this post I will maintain a list of blog posts, projects and related material which cover the whole Clean
+Architecture subject (aka onion architecture, hexagonal architecture or "ports and adapters". This list is
+language/framework agnostic). Also this post covers ideas of modularity, and in general well designed software.
 
 ## Implemented projects
 * [Clean Architecture Example (Java): Example of what clean architecture would look like (in Java)](https://github.com/mattia-battiston/clean-architecture-example) + [slides](https://www.slideshare.net/mattiabattiston/real-life-clean-architecture-61242830)
@@ -14,12 +14,13 @@ In this post I will maintain the list of blog posts. projects and related things
 * [The concept of Clean architecture by Uncle Bob](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
 * [Screaming architecture by Uncle Bob](https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html)
 * [Hexagonal architecture by Alex Cockburn](http://alistair.cockburn.us/Hexagonal+architecture)
-* [Hexagonal Architecture (@fideloper)](http://fideloper.com/hexagonal-architecture)
+* [Is High Quality Software Worth the Cost? by Martin Fowler](https://martinfowler.com/articles/is-quality-worth-cost.html)
 * [Cleaning up your codebase with a clean architecture by Barry O Sullivan](https://dev.to/barryosull/cleaning-up-your-codebase-with-a-clean-architecture)
 * [Layers, ports & adapters - Part 1, Foreword by M.Noback](https://php-and-symfony.matthiasnoback.nl/2017/07/layers-ports-and-adapters-part-1-introduction/) - nice overview of developer's mind shifting towards "Simple architecture" + [part2](https://php-and-symfony.matthiasnoback.nl/2017/08/layers-ports-and-adapters-part-2-layers/)
 * [A github repo with lots of related links](https://github.com/PhpFriendsOfDdd/state-of-the-union) - worth reading and learning
 * [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/) - good introduction from seasoned developer whos been applying all these practices in real life
 * [Blog posts from M.Noback on Architecture subject](https://matthiasnoback.nl/tags/design/)
+
 
 ## Slides
 * [Clean architecture with ddd layering in php by Leonardo Proietti](https://www.slideshare.net/_leopro_/clean-architecture-with-ddd-layering-in-php-35793127)
@@ -56,3 +57,4 @@ In this post I will maintain the list of blog posts. projects and related things
 * [Prooph](http://getprooph.org/) - well designed service bus, event sourcing package. Awesome lib to design a decoupled system.
 * [Symfony Messenger](https://github.com/symfony/messenger) - The Messenger component helps application send and receive messages to/from other applications or via message queues.
 * [Deptrac](https://github.com/sensiolabs-de/deptrac) - a tool to enforce architectural boundaries (handy!)
+* [rectorphp/rector](https://github.com/rectorphp/rector) - Instant Upgrades and Instant Refactoring of any PHP 5.3+ code
