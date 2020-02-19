@@ -1,7 +1,10 @@
 slug: affordable-custom-development-php 
 date: 1 Dec 2019, 12:00
 unlisted: yes
-# Affordable Custom Development In PHP 
+# Affordable Custom Development In PHP
+
+## TL;DR;
+Small team. High standards. Affordable Price.
 
 ## Do you need our services? Let's check
 
