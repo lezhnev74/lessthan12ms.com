@@ -49,6 +49,7 @@ language/framework agnostic). Also this post covers ideas of modularity, and in 
 * [Kevlin Henney - Seven Ineffective Coding Habits of Many Programmers](https://www.youtube.com/watch?v=SUIUZ09mnwM)
 * [Andrew Cassell | Domain-driven Design Deconstructed](https://www.youtube.com/watch?v=bgJafJI8mp8)
 * [Coding a Better World Together - with Uncle Bob - Day 1](https://www.youtube.com/watch?v=SVRiktFlWxI) + [day 2](https://www.youtube.com/watch?v=qnq9syXUuFE)
+* [OOP 2015 Keynote - Robert Martin: Agility and Architecture](https://www.youtube.com/watch?v=0oGpWmS0aYQ&t=1s)
 
 ## Podcasts
 * [Uncle Bob Martin on Clean Software, Craftsperson, Origins of SOLID, DDD, & Software Ethics](https://www.infoq.com/podcasts/uncle-bob-solid-ddd)
