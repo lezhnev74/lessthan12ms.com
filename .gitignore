@@ -7,3 +7,4 @@ tests/stub/web/*
 .phpunit*
 storage/cache/
 storage/log.log
+**/draft.md
