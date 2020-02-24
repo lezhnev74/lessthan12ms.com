@@ -168,7 +168,7 @@ easy to understand. There are, of course, tools, and practices, and processes th
 future texts.
 
 ## Follow-up Questions
-- Why clients force us to push new software as fast as possible?
+- Why clients force us to deliver new software as fast as possible?
 - Why understanding an existing system takes more and more effort through time?
-- What is a quick solution in software development, what are cons and pros or applying them?
+- What is a quick solution in software development, what are cons and pros of applying them?
 - What design approach can help us to limit complexity of a system?
