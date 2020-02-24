@@ -95,7 +95,7 @@ in mind - **how easy it will be to understand this system in the future**?
 >
 > *Martin Fowler*
 
-We can't justify our poor decisions by a lack of time. We can afford to be short-sighted. Quick solutions are good for
+We can't justify our poor decisions by a lack of time. We can't afford to be short-sighted. Quick solutions are good for
 "here and now", but if you think about the future, how this system will be changed by somebody else, you realize that
 you should've made different decisions.
 
@@ -166,3 +166,9 @@ constantly. Well designed code allows us to spend less time to change it. No mat
 the long run, more reliable to design a well decoupled, and tested code. It is our responsibility to keep our codebase
 easy to understand. There are, of course, tools, and practices, and processes that help us. We will review them in
 future texts.
+
+## Follow-up Questions
+- Why clients force us to push new software as fast as possible?
+- Why understanding an existing system takes more and more effort through time?
+- What is a quick solution in software development, what are cons and pros or applying them?
+- What design approach can help us to limit complexity of a system?

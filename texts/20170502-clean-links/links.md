@@ -20,7 +20,7 @@ language/framework agnostic). Also this post covers ideas of modularity, and in 
 * [A github repo with lots of related links](https://github.com/PhpFriendsOfDdd/state-of-the-union) - worth reading and learning
 * [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/) - good introduction from seasoned developer whos been applying all these practices in real life
 * [Blog posts from M.Noback on Architecture subject](https://matthiasnoback.nl/tags/design/)
-
+* [Maintaining model integrity by Vytautas Žurauskas](https://www.vzurauskas.com/2018/07/24/maintaining-model-integrity/)
 
 ## Slides
 * [Clean architecture with ddd layering in php by Leonardo Proietti](https://www.slideshare.net/_leopro_/clean-architecture-with-ddd-layering-in-php-35793127)
