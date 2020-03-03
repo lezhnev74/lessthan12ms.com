@@ -15,7 +15,7 @@
             <a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
             advocate<br>
         </div>
-        <img src="/img/badge.svg" title="available for contracting">
+{{--        <img src="/img/badge.svg" title="available for contracting">--}}
 
         <br><br>
 
