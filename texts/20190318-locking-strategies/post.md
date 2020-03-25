@@ -176,3 +176,4 @@ Solutions to consider:
 - [ProgrammingTricks / Ghetto central locking](https://github.com/memcached/memcached/wiki/ProgrammingTricks#ghetto-central-locking)
 - [Wiki / Lock (computer science)](https://en.wikipedia.org/wiki/Lock_(computer_science))
 - [How to do distributed locking / Martin Kleppmann](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
+- [php-lock/lock](https://github.com/php-lock/lock) - good implementation for the locking system in PHP

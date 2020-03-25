@@ -184,3 +184,5 @@ Ok, this post is kind of messy. I hope provided links to repositories and genera
 - Lists of packages to use:
   - http://thephpleague.com/
   - https://github.com/ziadoz/awesome-php
+  - https://github.com/lezhnev74/blank
+  
