@@ -10,6 +10,7 @@ use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
+use Slim\Exception\HttpMethodNotAllowedException;
 use Slim\Exception\HttpNotFoundException;
 use Throwable;
 
@@ -31,7 +32,7 @@ class ErrorHandler
         bool $logErrors,
         bool $logErrorDetails
     ): ResponseInterface {
-        if ($logErrors) {
+        if ($logErrors && $this->logException($exception)) {
             $this->log->error($exception->getMessage(), ['exception' => (string)$exception]);
         }
 
@@ -43,6 +44,15 @@ class ErrorHandler
         }
 
         return $response;
+    }
+
+    private function logException(Throwable $exception): bool
+    {
+        $excluded = [
+            HttpNotFoundException::class,
+            HttpMethodNotAllowedException::class,
+        ];
+        return !in_array(get_class($exception), $excluded, true);
     }
 
 }
