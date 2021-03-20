@@ -14,11 +14,16 @@ class BladeRendererFactory
 {
     private Posts $posts;
     private App $app;
+    private string $env;
 
-    public function __construct(Posts $posts, App $app)
-    {
+    public function __construct(
+        Posts $posts,
+        App $app,
+        string $env
+    ) {
         $this->posts = $posts;
         $this->app = $app;
+        $this->env = $env;
     }
 
 
@@ -33,7 +38,12 @@ class BladeRendererFactory
     {
         $views = base_path() . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'views'; // to read the templates
         $cache = base_path() . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'cache'; // to compile the result
-        $mode = (env('APP_ENV') !== 'production') ? BladeOne::MODE_SLOW : BladeOne::MODE_AUTO;
+        $mode = BladeOne::MODE_SLOW;
+
+        if($this->env === 'production') {
+            $mode = BladeOne::MODE_FAST;
+        }
+
         return new BladeOne($views, $cache, $mode);
     }
 
@@ -50,6 +60,6 @@ class BladeRendererFactory
         }, $this->posts->getAllPostsOrderByDate());
         $renderer->share('postLinks', $postLinks);
 
-        $renderer->share('env', config('env'));
+        $renderer->share('env', $this->env);
     }
 }

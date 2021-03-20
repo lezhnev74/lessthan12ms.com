@@ -44,10 +44,8 @@ if [ $# -gt 0 ];then
     # pass-thru any extra arguments to php
     elif [ "$1" == "php" ]; then
         shift 1
-        $COMPOSE run --rm \
-            -w /var/www \
-            app \
-            php "$@"
+        rm -rf ./storage/cache/*
+        $COMPOSE run --rm -w /var/www app php "$@"
 
     # Else, pass-thru args to docker-compose
     else

@@ -6,6 +6,7 @@ namespace Textsite\Infrastructure\HTMLRenderer;
 
 use Cocur\Slugify\Slugify;
 use League\CommonMark\ConverterInterface;
+use League\CommonMark\MarkdownConverterInterface;
 use Stringy\Stringy;
 use Textsite\Domain\MarkdownPost;
 
@@ -14,10 +15,10 @@ use Textsite\Domain\MarkdownPost;
  */
 class HTMLRenderer
 {
-    /** @var ConverterInterface */
+    /** @var MarkdownConverterInterface */
     private $converter;
 
-    public function __construct(ConverterInterface $converter) { $this->converter = $converter; }
+    public function __construct(MarkdownConverterInterface $converter) { $this->converter = $converter; }
 
 
     public function render(MarkdownPost $post): string

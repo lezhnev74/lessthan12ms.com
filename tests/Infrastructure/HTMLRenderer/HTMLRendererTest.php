@@ -21,7 +21,7 @@ text
 text
 ### Sub sub title
 MD;
-        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text);
+        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false);
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
@@ -42,7 +42,7 @@ text
 ## Sub title 2
 #### Sub title 4
 MD;
-        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text);
+        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false);
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
