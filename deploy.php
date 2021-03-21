@@ -9,6 +9,9 @@ chdir(base_path());
 `git fetch --all`; // this fetches all the updates
 `git reset --hard origin/master`; // this would drop local changes if any
 
+// update dependencies
+`composer install`;
+
 // and now wipe out the cache
 `rm -rf ./web/cache/*`;
 `rm -rf ./storage/tmp/*`;
