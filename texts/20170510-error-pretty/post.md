@@ -1,5 +1,5 @@
-date: May 10, 2017 16:12
-slug: error-handling-in-php-and-formatting-pretty-error-responses-to-users
+- date:May 10, 2017 16:12
+- slug:error-handling-in-php-and-formatting-pretty-error-responses-to-users
 # Error handling in PHP and formatting pretty error responses to users
 An error handler is developer's best friend. It will take responsibility when normal code execution stops because of the error or a thrown exception.
 

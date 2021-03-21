@@ -1,5 +1,5 @@
-slug: my-php-code-structure-should-tell-you-what-it-does-or-how-do-i-show-projects-intents-to-my-teammates
-date: Jan 1, 2017 17:15
+- slug:my-php-code-structure-should-tell-you-what-it-does-or-how-do-i-show-projects-intents-to-my-teammates
+- date:Jan 1, 2017 17:15
 # My PHP code structure should tell you what it does - or how do I show project's intents to my teammates?
 <p>That is not a secret that popular frameworks like Laravel, Symfony and the rest greatly increase the speed of development. But it comes with some side effects. For example, Laravel framework suggests to you to follow some built-in default folder structure and put Controllers to the <code>app/http/Controllers</code> and Jobs to the <code>app/Jobs</code> folder. The problem here is that by looking at folder structure you basically cannot say what the project does. There are few things you can do to let your teammate catch up on the project with much fewer efforts by showing the intents of the code on structure level.<!--more--></p>
 <h2>Laravel's default folder structure (as of Dec 2016)</h2>

@@ -1,5 +1,5 @@
-date:Apr 8, 2017 22:31
-slug:clean-exceptions-with-logging-and-translation
+- date:Apr 8, 2017 22:31
+- slug:clean-exceptions-with-logging-and-translation
 # Clean exceptions with logging and translation
 While PHP is exception-light language (comparing to Java, Python, Ruby etc), I still want to bring all the strictness into it and protect the code execution from unpredicted behaviour.
 

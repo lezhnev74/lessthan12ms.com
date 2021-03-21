@@ -1,5 +1,5 @@
-slug:dont-trust-files-users-upload-to-your-server
-date:Oct 2, 2016 15:29
+- slug:dont-trust-files-users-upload-to-your-server
+- date:Oct 2, 2016 15:29
 # Don't trust files users upload to your server
 <p>There are plenty of attack vectors to your server (app, data) based on uploaded files. Once an attacker uploaded a malicious file he has a chance to execute it because it is on your server already. </p>
 <p><!--more--></p>

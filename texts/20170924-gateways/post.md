@@ -1,5 +1,5 @@
-slug: request-handler-as-a-gateway-to-your-backend-keep-your-code-clean
-date: Sep 24, 2017 12:37
+- slug:request-handler-as-a-gateway-to-your-backend-keep-your-code-clean
+- date:Sep 24, 2017 12:37
 # Request handler as a gateway to your backend – keep your code clean
 Inspired by the great [post](https://jenssegers.com/85/goodbye-controllers-hello-request-handlers) from Jens Segers. It makes a lot of sense to me to separate different steps of request handling.
 

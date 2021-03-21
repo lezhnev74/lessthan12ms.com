@@ -1,5 +1,6 @@
-slug: docker-php-xdebug-phpstorm-good-developer-experience 
-date: 2019-07-09 14:52:16  
+- slug:docker-php-xdebug-phpstorm-good-developer-experience
+- date:2019-07-09 14:52:16
+
 # Docker + PHP + Xdebug + PHPStorm = Good Developer Experience
 Nowadays we move from using the local environment or virtual machines to Docker-based development. It is much easier to spin up a docker container
 rather than starting a new virtual machine (ie Vagrant). Docker also helps you keep your system dependencies under

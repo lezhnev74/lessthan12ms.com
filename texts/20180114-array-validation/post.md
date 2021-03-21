@@ -1,5 +1,5 @@
-slug: php-array-validation-gets-simpler
-date: Jan 14, 2018 23:32
+- slug:php-array-validation-gets-simpler
+- date:Jan 14, 2018 23:32
 # PHP Array validation gets simpler
 In this article, I am talking about a tool called [pasvl](https://github.com/lezhnev74/pasvl) (still in beta as of Jan 2018) which is for array validation purposes. 
 

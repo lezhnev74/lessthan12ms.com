@@ -1,5 +1,5 @@
-slug: frameworkless-foundation-of-your-php-application
-date: Feb 14, 2018 18:36
+- slug:frameworkless-foundation-of-your-php-application
+- date:Feb 14, 2018 18:36
 # Frameworkless foundation of your PHP application
 ## TL; DR;
 This post is about making a PHP from scratch with no framework. It explains how it is usually done by pulling few dependencies with composer and gluing them together in a solid foundation to build upon.

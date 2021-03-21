@@ -1,5 +1,5 @@
-slug: openapi-with-php-documenting-and-testing-api-automatically
-date: May 3, 2019 18:01
+- slug:openapi-with-php-documenting-and-testing-api-automatically
+- date:May 3, 2019 18:01
 # OpenAPI with PHP - documenting and testing API automatically
 Note: the code mentioned in this post can be found here:
 [https://github.com/lezhnev74/openapi-php-demo](https://github.com/lezhnev74/openapi-php-demo).
@@ -23,7 +23,7 @@ I've created a file in the project folder: `openapi/spec.yaml`
 ```yaml
 openapi: 3.0.2
 info:
-  title: Password generation API
+  - title:Password generation API
   version: 1.0.0
   contact:
     name: Dmitry Lezhnev

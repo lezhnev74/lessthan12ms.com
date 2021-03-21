@@ -1,5 +1,5 @@
-slug:clean-laravel-app-with-prooph-message-bus
-date: Dec 26, 2017 20:21
+- slug:clean-laravel-app-with-prooph-message-bus
+- date:Dec 26, 2017 20:21
 # Clean Laravel app with Prooph message bus
 ## What is Prooph
 [Prooph](http://getprooph.org/) is a set of loosely coupled PHP packages that can be composed to a powerful toolbox. It has quite a few projects under the umbrella of the Prooph project on [GitHub](https://github.com/prooph), including message bus, an event store, event sourcing and snapshotting.

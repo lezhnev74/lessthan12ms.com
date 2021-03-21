@@ -1,5 +1,5 @@
-slug: expensive-code  
-date: 21 Feb 2020, 08:00
+- slug:expensive-code
+- date:21 Feb 2020, 08:00
 # Expensive Code (Maintainable PHP Backend 1/3)
 
 <style>

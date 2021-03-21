@@ -49,8 +49,11 @@ final class MarkdownParser
 
     private function parseMeta(string $meta, string $string): string
     {
-        if (!preg_match('#^' . $string . ':(.*)$#m', $meta, $p) || !trim($p[1])) {
-            throw new PostMetaStructureIncorrect(sprintf('Unable to find meta for "%s"', $string));
+        if (!preg_match('#^\s*-\s*' . $string . ':(.*)$#m',
+                $meta,
+                $p) || !trim($p[1])) {
+            throw new PostMetaStructureIncorrect(sprintf('Unable to find meta for "%s"',
+                $string));
         }
         return trim($p[1]);
     }

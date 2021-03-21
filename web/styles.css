@@ -70,10 +70,16 @@ li { margin-bottom: 10px; }
     font-size: 12px;
     line-height: 1.4em;
 }
+
 .post code {
     padding: 0.5em;
     color: #333;
     background: #f8f8f8;
+    white-space: nowrap;
+}
+
+.post pre code {
+    white-space: inherit;
 }
 
 .date {

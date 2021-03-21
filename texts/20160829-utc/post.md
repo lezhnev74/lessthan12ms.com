@@ -1,5 +1,5 @@
-slug:save-all-dates-in-utc-for-multi-timezone-apps
-date:Aug 29, 2016  15:58
+- slug:save-all-dates-in-utc-for-multi-timezone-apps
+- date:Aug 29, 2016 15:58
 # Save all dates in UTC for multi timezone apps
 <p>So when dealing with dates which must be presented to a user in his local time zone it's better to store those in UTC (default) time zone.<!--more--></p>
 <p>In case for a Laravel app you should set app's timezone to UTC (it will be used for database connections). This is actually a default value for that config option:</p>

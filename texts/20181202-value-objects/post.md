@@ -1,5 +1,5 @@
-date: Dec 2, 2018 19:50
-slug: value-objects-in-php
+- date:Dec 2, 2018 19:50
+- slug:value-objects-in-php
 # Value Objects in PHP
 One of the best things happened to my code was using Value Objects (VOs). 
 

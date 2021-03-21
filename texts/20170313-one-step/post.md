@@ -1,5 +1,5 @@
-date:Mar 13, 2017 21:24
-slug:one-step-towards-clean-architecture-from-rapid-application-development
+- date:Mar 13, 2017 21:24
+- slug:one-step-towards-clean-architecture-from-rapid-application-development
 # One step towards clean architecture from rapid application development
 ## The motivation for making this step
 Having years of experience in rapid development in greenfield and sadly in brownfield projects, I realized that benefits of fast development at the beginning, become issues with maintaining and introducing new features later in the project life. 

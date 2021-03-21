@@ -1,5 +1,5 @@
-slug: how-to-log-every-http-request-and-response-in-laravel
-date: Jul 17, 2017 23:33
+- slug:how-to-log-every-http-request-and-response-in-laravel
+- date:Jul 17, 2017 23:33
 # How to log(see, view) every HTTP request and response in Laravel
 > F: You API does not work!
 > B: Oh my god, you must have sent a wrong request. 
@@ -57,7 +57,7 @@ authorization: Bearer Tu11PBxFArZKsbHu1Cjr3OvwfbBjlz7B7h1aV6Og
 
 HTTP/1.1 200 OK
 cache-control: no-cache
-date: Wed, 16 Jan 2019 05:56:12 GMT
+- date:Wed, 16 Jan 2019 05:56:12 GMT
 content-type: application/json
 
 {"id":2}

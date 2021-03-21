@@ -1,5 +1,5 @@
-slug: a-hacker-and-a-nerd-the-two-hats-of-engineers
-date: May 26, 2018 19:15
+- slug:a-hacker-and-a-nerd-the-two-hats-of-engineers
+- date:May 26, 2018 19:15
 # A hacker and a nerd  - the two hats of engineers
 From my experience working in 3 companies which were developing a product, I can say that 80% of code we produced was redundant. I mean it was developed to support services that did not find the “[product-market fit](https://en.wikipedia.org/wiki/Product/market_fit)”. In other words, founders’ assumptions about what market needs failing after significant investments into development rather than before that.
 

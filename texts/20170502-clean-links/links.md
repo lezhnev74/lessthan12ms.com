@@ -1,5 +1,5 @@
-date:May 2, 2017 19:02
-slug: clean-architecture-links
+- date:May 2, 2017 19:02
+- slug:clean-architecture-links
 # Clean architecture links
 In this post I will maintain a list of blog posts, projects and related material which cover the whole Clean
 Architecture subject (aka onion architecture, hexagonal architecture or "ports and adapters". This list is

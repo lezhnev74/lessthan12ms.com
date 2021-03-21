@@ -1,5 +1,5 @@
-slug:validation-is-documentation
-date: May 18, 2018 17:14
+- slug:validation-is-documentation
+- date:May 18, 2018 17:14
 # Validation is documentation
 ## Separation of concerns
 

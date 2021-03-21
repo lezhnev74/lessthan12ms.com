@@ -1,5 +1,6 @@
-slug: how-active-record-harms-domain-logic
-date: Nov 22, 2018 12:42 
+- slug:how-active-record-harms-domain-logic
+- date:Nov 22, 2018 12:42
+
 # How Active Record harms domain logic
 The most critical part of a system is writing, altering the state. This operation has the most business responsibility.
 

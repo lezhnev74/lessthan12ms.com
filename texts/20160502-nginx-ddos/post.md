@@ -1,5 +1,5 @@
-slug:protect-your-site-from-ddos-with-free-built-in-nginx-feature-ngx-http-limit-req-module
-date:May 2, 2016 05:56
+- slug:protect-your-site-from-ddos-with-free-built-in-nginx-feature-ngx-http-limit-req-module
+- date:May 2, 2016 05:56
 # Protect your site from ddos with free built-in nginx feature ngx_http_limit_req_module
 <p>When you expect (or not) your website to be a target of malicious traffic – make some free efforts to protect from it. Use nginx option to limit connections allowed per IP. This is not the only thing you could do but this is the least thing you should do.</p>
 <p>Option `<a href="http://nginx.org/en/docs/http/ngx_http_limit_req_module.html#limit_req_zone">ngx_http_limit_req_module</a>` lets you to set limitations of simultaneous connection per IP. </p>

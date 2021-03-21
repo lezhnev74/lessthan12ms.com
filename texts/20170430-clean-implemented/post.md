@@ -1,5 +1,5 @@
-slug:clean-architecture-implemented-as-a-php-app
-date: Apr 30, 2017 22:05
+- slug:clean-architecture-implemented-as-a-php-app
+- date:Apr 30, 2017 22:05
 # Clean architecture implemented as a PHP app
 Hi! Having worked with Laravel for a few years, I found myself in a pool of "laravelish" ways of doing things. The Laravel way is easy to start and easy to make progress. 
 

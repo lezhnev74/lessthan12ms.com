@@ -1,5 +1,5 @@
-date: 19 Oct 2019 
-slug: software-development-discipline
+- date:19 Oct 2019
+- slug:software-development-discipline
 # The Discipline Of Software Development
 Let's face the truth, modern backend development is ruled by frameworks. But that is not the problem. The problem is
 that we did not develop a discipline to use them properly.

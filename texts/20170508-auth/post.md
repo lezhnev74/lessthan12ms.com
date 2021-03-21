@@ -1,5 +1,5 @@
-slug: authorization-and-authentication-in-clean-architecture
-date: May 8, 2017 18:07
+- slug:authorization-and-authentication-in-clean-architecture
+- date:May 8, 2017 18:07
 # Authorization and authentication in clean architecture
 When I follow the clean architecture idea, I isolate concerns in layers. Having 3 basic layers in mind: application, infrastructure, and domain, where should I put my authentication and authorization logic?
 

@@ -1,5 +1,5 @@
-slug: php-7-zend-certified-engineer-exam-zce
-date: Aug 15, 2018 09:40
+- slug:php-7-zend-certified-engineer-exam-zce
+- date:Aug 15, 2018 09:40
 # PHP 7: Zend Certified Engineer Exam (ZCE)
 ## Shortly
 - 12 month ago I've started thinking  it'd be awesome to actually take the exam.

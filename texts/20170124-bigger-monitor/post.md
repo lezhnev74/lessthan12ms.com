@@ -1,5 +1,5 @@
-slug:why-i-need-a-bigger-monitor-monitors-set-to-improve-quality-of-my-code
-date:Jan 24, 2017 10:13
+- slug:why-i-need-a-bigger-monitor-monitors-set-to-improve-quality-of-my-code
+- date:Jan 24, 2017 10:13
 # Why I need a bigger monitor (monitors set) to improve quality of my code?
 <p>I am a big fan of mobility, I love working from different places (a home office, coffee shops, planes and other places). That's why my main device is my laptop (13" display size). I kind of dislike the idea of being attached to a single workplace. But I have recently faced a little inconvenience working with explicitly named functions in my code.<!--more--></p>
 <p>Look at my editor with some recent side project of mine:</p>

@@ -1,5 +1,5 @@
-slug: php-cache-practical-reliable-multi-driver-multilevel-chainable-cache
-date: Aug 31, 2018 16:18
+- slug:php-cache-practical-reliable-multi-driver-multilevel-chainable-cache
+- date:Aug 31, 2018 16:18
 # PHP Cache - practical, reliable, multi driver, multilevel chainable cache
 ## The need for a cache
 Well, caching is usually known as an optimization practice. It is known for both being very handy and being very [dangerous](https://martinfowler.com/bliki/TwoHardThings.html):

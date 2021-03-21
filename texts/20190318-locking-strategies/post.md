@@ -1,5 +1,5 @@
-date: Mar 18, 2019 13:11
-slug: data-locking-strategies-in-php-apps-practical-approach
+- date:Mar 18, 2019 13:11
+- slug:data-locking-strategies-in-php-apps-practical-approach
 # Data locking strategies in PHP apps. Practical approach
 Locking is a method of synchronization of data access. We need a locking mechanism to make sure no one else is working with the data we are about to read or change. The purpose of locking can be various:
 - **Data integrity**. Make sure that no one else is reading or changing the data we are working with.

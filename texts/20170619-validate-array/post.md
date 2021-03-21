@@ -1,5 +1,5 @@
-slug:how-to-validate-a-php-array-format-structure
-date: Jun 19, 2017 16:04
+- slug:how-to-validate-a-php-array-format-structure
+- date:Jun 19, 2017 16:04
 # How to validate(check) a php array format (structure)
 I have been working with arrays for ages and sometimes I needed a way to validate that array has expected structure. I usually need to know if an array has specific keys and specific values (at least type of values).
 

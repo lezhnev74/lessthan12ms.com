@@ -1,5 +1,5 @@
-slug: think-frameworkless
-date: Nov 7, 2018 11:36
+- slug:think-frameworkless
+- date:Nov 7, 2018 11:36
 # Think "frameworkless"
 A great discussion about frameworkless happened in comments under [this post](https://lessthan12ms.com/frameworkless-foundation-of-your-php-application/). Answering Leo here.
 

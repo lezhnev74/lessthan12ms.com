@@ -1,5 +1,5 @@
-date: May 6, 2017 10:16
-slug: when-clean-architecture-is-not-worth-it
+- date:May 6, 2017 10:16
+- slug:when-clean-architecture-is-not-worth-it
 # When clean architecture is not worth it
 Clean (onion) architecture historically [came to solve](http://blog.thedigitalgroup.com/chetanv/2015/07/06/understanding-onion-architecture/) coupling problems which lead to a very time-consuming change of the software. It separates code into layers with strict rules of which layer can access another and in which way. Changes in a given layer will never affect the code in the other layer which leads to the fundamentally better capability to change.
 

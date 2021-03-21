@@ -26,7 +26,7 @@ POST
                 <<<POST
 
 
-slug: what-is-ddd
+- slug: what-is-ddd
 # What is DDD Actually?
 POST
             ],
@@ -40,8 +40,8 @@ POST
             ],
             [
                 <<<POST
-date: 13 Oct 2019
-slug: 
+- date: 13 Oct 2019
+- slug: 
 # What is DDD Actually? 
 POST
             ],
@@ -61,8 +61,8 @@ POST
     public function testItParsesValidTextCorrectly(): void
     {
         $text = <<<TEXT
-date: 10 Oct 2019, 08:00
-slug: what-is-ddd
+- slug: what-is-ddd
+- date: 10 Oct 2019, 08:00
 # What is DDD Actually?
 Well, there are many schools of **thought**.
 TEXT;

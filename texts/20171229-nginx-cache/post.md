@@ -1,5 +1,5 @@
-slug: nginx-to-cache-dynamic-phplaravel-pages-make-your-website-partly-static-and-reduce-response-time
-date: Dec 29, 2017 23:51
+- slug:nginx-to-cache-dynamic-phplaravel-pages-make-your-website-partly-static-and-reduce-response-time
+- date:Dec 29, 2017 23:51
 # Nginx to cache dynamic PHP(Laravel) pages. Make your website partly static and reduce response time.
 ## Intro
 
