@@ -3,10 +3,10 @@
 
 # Evaluation Of Expressions In PHP (as of 7.4)
 
-In PHP an expression is something that can be evaluated to a single value. Like `5` is an expression that evaluates to
-integer 5, and `is_null(5)` is evaluated to boolean `false`. Expressions can be complex and contain many operators and
-function calls, also including parentheses that control the order of evaluation. See `abs(5 * (2 - 3))` evaluates to
-integer `5`.
+In programming languages an expression is something that can be evaluated to a single value. Like `5` is an expression
+that evaluates to integer 5, and `is_null(5)` is evaluated to boolean `false`. Expressions can be complex and contain
+many operators and function calls, also including parentheses that control the order of evaluation.
+See `abs(5 * (2 - 3))` evaluates to integer `5`.
 
 When we write a complex expression, we expect that the result is predictable. We could write a test to confirm that, but
 also it'd good to have a clear understanding of how PHP interprets expressions. The skill of evaluating expressions with
