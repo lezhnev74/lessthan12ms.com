@@ -3,17 +3,16 @@
         <img src="/img/lezhnev.png" style="max-width: 100px;">
     </div>
     <div>
-        <a href="/">LESSTHAN12MS.COM</a><br>
-
+        🇷🇺 <a href="/">Dmitriy Lezhnev</a><br>
     </div>
     <div class="textwidget">
         <div class="me">
-            by 🇷🇺 Dmitry Lezhnev<br>
-            Web Backend Developer<br>
+            Software Developer<br>
             PHP/<a href="https://lemp.io/">LEMP-stack</a> practitioner<br>
             <a href="http://www.zend.com/en/yellow-pages/ZEND031138">Zend Certified Engineer</a><br>
             <a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
             advocate<br>
+            👔 <a href="/php-consulting">PHP Consulting</a>
         </div>
 {{--        <img src="/img/badge.svg" title="available for contracting">--}}
 

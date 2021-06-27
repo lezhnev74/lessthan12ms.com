@@ -2,10 +2,10 @@
 @section('pageTitle', $title)
 @section('post')
     <div class="post">
-        Welcome to the blog.
+        Welcome to my blog.
 
         <br><br><br>
-        <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/source.gif">
+        <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/source.gif" />
         <br><br><br>
 
     </div>
