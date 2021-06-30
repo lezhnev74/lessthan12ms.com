@@ -14,7 +14,6 @@
             advocate<br>
             👔 <a href="/php-consulting">PHP Consulting</a>
         </div>
-{{--        <img src="/img/badge.svg" title="available for contracting">--}}
 
         <br><br>
 
@@ -33,6 +32,14 @@
             <img src="/img/docker.png" alt="Docker" title="Docker">
             <br>
             <img src="/img/badge_remote_work.png" alt="Remote developer" title="Remote developer" style="height:50px;">
+        </div>
+
+        <p>Find me on the Internet</p>
+        <div class="social">
+            <a href="https://twitter.com/dimalezhnev"><img src="/img/soc/twitter.png"></a>
+            <a href="https://github.com/lezhnev74"><img src="/img/soc/github.png"></a>
+            <a href="https://www.linkedin.com/in/dmitriy-lezhnev/"><img src="/img/soc/linkedin.png"></a>
+            <a href="https://stackoverflow.com/users/1637031/dmitriy-lezhnev"><img src="/img/soc/so.png"></a>
         </div>
     </div>
 </div>

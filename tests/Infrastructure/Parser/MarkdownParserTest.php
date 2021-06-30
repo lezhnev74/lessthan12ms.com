@@ -63,6 +63,7 @@ POST
         $text = <<<TEXT
 - slug: what-is-ddd
 - date: 10 Oct 2019, 08:00
+- page: yes
 # What is DDD Actually?
 Well, there are many schools of **thought**.
 TEXT;
@@ -71,6 +72,7 @@ TEXT;
         $post = $parser->parseText($text);
         $this->assertEquals('What is DDD Actually?', $post->title());
         $this->assertTrue(CarbonImmutable::parse('10 Oct 2019, 08:00')->eq($post->publishDate()));
+        $this->assertTrue($post->page());
         $this->assertEquals('what-is-ddd', $post->slug());
         $this->assertEquals(<<<BODY
 # What is DDD Actually?

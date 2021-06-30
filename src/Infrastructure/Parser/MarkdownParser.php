@@ -32,10 +32,16 @@ final class MarkdownParser
         $title = $this->getTitleInBody($body);
         $slug = $this->parseMeta($meta, 'slug');
         $date = $this->parseMeta($meta, 'date');
+
         try {
             $unlisted = $this->parseMeta($meta, 'unlisted') === 'yes';
         } catch (PostMetaStructureIncorrect $e) {
             $unlisted = false;
+        }
+        try {
+            $page = $this->parseMeta($meta, 'page') === 'yes';
+        } catch (PostMetaStructureIncorrect $e) {
+            $page = false;
         }
 
         return new MarkdownPost(
@@ -43,7 +49,8 @@ final class MarkdownParser
             $slug,
             CarbonImmutable::parse($date),
             $body,
-            $unlisted
+            $unlisted,
+            $page
         );
     }
 

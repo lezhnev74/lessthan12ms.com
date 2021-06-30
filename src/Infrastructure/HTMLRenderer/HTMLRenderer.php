@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Textsite\Infrastructure\HTMLRenderer;
 
 use Cocur\Slugify\Slugify;
-use League\CommonMark\ConverterInterface;
 use League\CommonMark\MarkdownConverterInterface;
 use Stringy\Stringy;
 use Textsite\Domain\MarkdownPost;
@@ -25,7 +24,9 @@ class HTMLRenderer
     {
         $html = $this->converter->convertToHtml($post->text());
         [$html, $anchors] = $this->addAnchors($html);
-        $html = $this->addTableContent($html, $anchors);
+        if(!$post->page()) {
+            $html = $this->addTableContent($html,$anchors);
+        }
         return $html;
     }
 

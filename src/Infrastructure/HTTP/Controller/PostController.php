@@ -57,8 +57,8 @@ class PostController
             'date' => $post->publishDate()->format('D, j M Y'),
             'body' => $postHtml,
             'slug' => $post->slug(),
-            'url' => $this->app->getRouteCollector()->getRouteParser()
-                ->fullUrlFor($request->getUri(), 'post', ['slug' => $post->slug()])
+            'comments_enabled' => !$post->page(),
+            'url' => $this->app->getRouteCollector()->getRouteParser()->fullUrlFor($request->getUri(), 'post', ['slug' => $post->slug()])
         ];
         $html = $this->viewRenderer->run('post', $viewModel);
 

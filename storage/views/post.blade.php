@@ -6,7 +6,9 @@
         {!!$body!!}
     </div>
     <br><br>
-    @include('comments')
+    @if($comments_enabled)
+        @include('comments')
+    @endif
 @endsection
 @section('footer')
     <link rel="stylesheet" href="/js/highlight/styles/idea.css">

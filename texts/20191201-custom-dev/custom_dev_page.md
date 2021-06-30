@@ -1,6 +1,7 @@
 - slug:php-consulting
 - date:1 Dec 2019, 12:00
 - unlisted: yes
+- page: yes
 # PHP Consultant for your business
 
 ## Your website

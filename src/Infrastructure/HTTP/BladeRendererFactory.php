@@ -26,7 +26,6 @@ class BladeRendererFactory
         $this->env = $env;
     }
 
-
     public function create(): BladeOne
     {
         $renderer = $this->makeInstance();

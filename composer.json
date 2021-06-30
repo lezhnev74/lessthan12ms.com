@@ -21,7 +21,7 @@
     "monolog/monolog": "^2.0",
     "eftec/bladeone": "^3.31",
     "voku/html-min": "^4.0",
-    "ocramius/proxy-manager": "~2.0",
+    "ocramius/proxy-manager": "^2.13",
     "cocur/slugify": "^3.2",
     "mibe/feedwriter": "^1.1",
     "webuni/commonmark-attributes-extension": "^1.0",

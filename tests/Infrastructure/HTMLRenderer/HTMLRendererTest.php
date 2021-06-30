@@ -6,7 +6,6 @@ namespace Tests\Infrastructure\HTMLRenderer;
 use Carbon\CarbonImmutable;
 use Monolog\Test\TestCase;
 use PHPHtmlParser\Dom;
-use PhpParser\NodeAbstract;
 use Textsite\Domain\MarkdownPost;
 use Textsite\Infrastructure\HTMLRenderer\HTMLRenderer;
 
@@ -21,7 +20,7 @@ text
 text
 ### Sub sub title
 MD;
-        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false);
+        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false, false);
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
@@ -42,7 +41,7 @@ text
 ## Sub title 2
 #### Sub title 4
 MD;
-        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false);
+        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false, false);
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
@@ -55,5 +54,27 @@ MD;
         $this->assertStringContainsString('Sub sub title', $toc->innerhtml);
         $this->assertStringContainsString('Sub title 2', $toc->innerhtml);
         $this->assertStringContainsString('Sub title 4', $toc->innerhtml);
+    }
+
+    public function testItSkipsTableOfContentsForPages(): void {
+        $text = <<<MD
+# Title
+text
+## Sub title
+text
+### Sub sub title
+## Sub title 2
+#### Sub title 4
+MD;
+        $post = new MarkdownPost('Title', 'slug', CarbonImmutable::now(), $text, false, true);
+        $renderer = container()->get(HTMLRenderer::class);
+        $html = $renderer->render($post);
+
+        // Assert ToC
+        $dom = new Dom();
+        $dom->load($html);
+        /** @var Dom\AbstractNode $toc */
+        $tocs = $dom->find('#toc');
+        $this->assertEmpty($tocs);
     }
 }
