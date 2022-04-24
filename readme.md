@@ -19,3 +19,14 @@ Deployment is done in steps:
 - run `php deploy.php` to download the repo
 - create and set values in `.env` file
 - add github webhook to react on new pushes, make it run this command on each new push `php deploy.php`
+- Nginx config on the server to support github hooks:
+```
+location /github-webhook/*****/ {
+    content_by_lua_block {
+        os.execute("cd <PROJECT_DIR> && sudo /usr/local/bin/docker-compose -f docker-compose.prod.yml build --no-cache app");
+        os.execute("cd <PROJECT_DIR> && sudo /usr/local/bin/docker-compose -f docker-compose.prod.yml exec -w /var/www app php deploy.php");
+        os.execute("cd <PROJECT_DIR> && sudo /usr/local/bin/docker-compose -f docker-compose.prod.yml restart app");
+    }
+}
+
+```
