@@ -10,6 +10,7 @@
 
 # Create docker-compose command to run
 COMPOSE="docker-compose -f docker-compose.dev.yml"
+export $(cat .env | xargs) #load .env variables
 
 # If we pass any arguments...
 if [ $# -gt 0 ];then

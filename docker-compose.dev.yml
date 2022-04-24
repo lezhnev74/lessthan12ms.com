@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/var/www:delegated
     ports:
-      - "8887:80"
+      - "${PORT:-80}:80"
     networks:
       - net
 networks:

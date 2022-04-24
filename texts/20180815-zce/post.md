@@ -4,7 +4,7 @@
 ## Shortly
 - 12 month ago I've started thinking  it'd be awesome to actually take the exam.
 - 6 month ago I downloaded the study guide and begun taking notes.
-- Yesterday [I have passed](http://www.zend.com/en/yellow-pages/ZEND031138) the Zend Certified Engineer exam.
+- Yesterday [I have passed](https://www.zend-zce.com/en/yellow-pages/ZEND031138) the Zend Certified Engineer exam.
 - It took roughly a year for me to feel confident enough to actually take the exam.
 
 ![](https://lessthan12ms.com/wp-content/uploads/2018/08/zend-05.jpg)
