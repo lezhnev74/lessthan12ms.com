@@ -17,7 +17,7 @@
 
         <br><br>
 
-        <a href="http://www.zend.com/en/yellow-pages/ZEND031138" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.zend-zce.com/en/yellow-pages/ZEND031138" target="_blank" rel="noopener noreferrer">
             <img style="max-width:100px;" src="/img/zend-cert-eng-2017-php.png">
         </a>
 
