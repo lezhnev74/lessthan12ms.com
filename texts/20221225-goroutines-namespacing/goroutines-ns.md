@@ -28,7 +28,8 @@ possible.
 There is [a proposal to add the same feature to Go (GLS)](https://github.com/golang/go/issues/21355). The argument
 against GLS is that it is an implicit concept that increases the complexity of a program. While passing around something
 like `ctx` is visible and serves the same purpose. There is a strong correlation with error propagation in Go. We drag
-errors everywhere (making them part of many function signatures), and Go went away from exceptions for a similar reason of
+errors everywhere (making them part of many function signatures), and Go went away from exceptions for a similar reason
+of
 explicitness.
 
 Some ideas from the discussion include having a new keyword for goroutine local variables like `let x int` or `local
@@ -44,7 +45,8 @@ option [here](https://blog.merovius.de/posts/2017-08-14-why-context-value-matter
 
 My take on it follows the same ideas of passing context around. Since `context` is immutable and can be copied to
 another `context` via `WithContext(...)` we can't use it directly as a namespace (the address changes). So we have
-to put an immutable "address value" to it at the beginning of the request's life cycle. The value remains the same throughout
+to put an immutable "address value" to it at the beginning of the request's life cycle. The value remains the same
+throughout
 the whole request-handling branch. So we can use it to access request-scoped data (so we need a service to maintain
 such state) as seen here:
 
@@ -63,3 +65,22 @@ func handlerRequest(ctx Context) any {
 
 The request-level storage is custom for each app and uses appropriate types of data. However, the idea remains the same,
 such request-level isolated data is addressed by the value stored in `context`.
+
+You can find the same approach used in [golang/appengine](https://github.com/golang/appengine):
+
+```
+// internal/api_common.go
+// ...
+var namespaceKey = "holds the namespace string"
+
+func withNamespace(ctx netcontext.Context, ns string) netcontext.Context {
+	return netcontext.WithValue(ctx, &namespaceKey, ns)
+}
+
+func NamespaceFromContext(ctx netcontext.Context) string { // <-- this string is used as a namespace for data storage
+	// If there's no namespace, return the empty string.
+	ns, _ := ctx.Value(&namespaceKey).(string)
+	return ns
+}
+// ...
+```
