@@ -3,14 +3,14 @@
         <img src="/img/lezhnev.png" style="max-width: 100px;">
     </div>
     <div>
-        🇷🇺 <a href="/">Dmitriy Lezhnev</a><br>
+        🇷🇺|🇷🇸 <a href="/">Dmitriy Lezhnev</a><br>
     </div>
     <div class="textwidget">
         <div class="me">
             Software Developer<br>
-            PHP/<a href="https://lemp.io/">LEMP-stack</a> practitioner<br>
+            PHP/<a href="https://lemp.io/">LEMP-stack</a>/Go practitioner<br>
             <a href="https://www.zend-zce.com/en/yellow-pages/ZEND031138">Zend Certified Engineer</a><br>
-            <a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
+            <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
             advocate<br>
             👔 <a href="/on-demand-php-developer">On-Demand PHP Development</a>
         </div>
