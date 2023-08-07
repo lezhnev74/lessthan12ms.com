@@ -51,5 +51,8 @@ use for writing data storage related programs.
 - [Fundamentals of Database Engineering (udemy course)](https://www.udemy.com/course/database-engines-crash-course/learn/lecture/28927902#content)
   by Hussein Nasser. This is an overview of database technology landscape. What I liked about it is its entertainment
   nature. The author is a good storyteller, and it could be a nice way to consume and systemize information.
+- [A New Era for Database Design with TigerBeetle](https://www.infoq.com/presentations/tigerbeetle/) by Joran Dirk
+  Greef. A brilliant sum-up of the foundational flaw in the MOST modern databases - they all rely on the kernel page
+  cache for durability, and it is just flawed.
 
 The list evolves as I read new things and find them helpful.
