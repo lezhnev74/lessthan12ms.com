@@ -30,6 +30,8 @@
             <img src="/img/linux_ubuntu.jpg" alt="Linux Ubuntu" title="Linux Ubuntu">
             <img src="/img/jbrains.png" alt="Jet Brains" title="Jet Brains">
             <img src="/img/docker.png" alt="Docker" title="Docker">
+            <img src="/img/duckdb_icon.png" alt="DuckDB" title="DuckDB">
+            <img src="/img/ch.jpeg" alt="Clickhouse" title="Clickhouse">
             <br>
             <img src="/img/badge_remote_work.png" alt="Remote developer" title="Remote developer" style="height:50px;">
         </div>
