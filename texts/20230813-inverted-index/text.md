@@ -186,4 +186,8 @@ Ok, wrapping up. The above text was intentionally scoped only to inverted index 
 more than that. Notably, an indexer will produce many inverted indexes that we want to query concurrently, merge for
 removing duplicates and remove once the source data file is removed. That is also something left out for future texts.
 
+## Implementation And Code
+
+I implemented the ideas described in this text as a Go program. See the code here: [github.com/lezhnev74/inverted_index](https://github.com/lezhnev74/inverted_index).
+
 Let me know what you think.
