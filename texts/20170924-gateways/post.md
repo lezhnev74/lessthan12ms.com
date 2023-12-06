@@ -1,7 +1,7 @@
 - slug:request-handler-as-a-gateway-to-your-backend-keep-your-code-clean
 - date:Sep 24, 2017 12:37
 # Request handler as a gateway to your backend – keep your code clean
-Inspired by the great [post](https://jenssegers.com/85/goodbye-controllers-hello-request-handlers) from Jens Segers. It makes a lot of sense to me to separate different steps of request handling.
+Inspired by the great [post](https://jenssegers.com/goodbye-controllers-hello-request-handlers) from Jens Segers. It makes a lot of sense to me to separate different steps of request handling.
 
 What Jens proposes is to isolate each request handler as a single class which purpose is to handle one particular request, validate input and pass the data further to the app bus. It allows a developer to inject required services in a constructor, write clean tests and keep codebase readable.
 

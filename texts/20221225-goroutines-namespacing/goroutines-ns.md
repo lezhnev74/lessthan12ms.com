@@ -66,7 +66,7 @@ func handlerRequest(ctx Context) any {
 The request-level storage is custom for each app and uses appropriate types of data. However, the idea remains the same,
 such request-level isolated data is addressed by the value stored in `context`.
 
-You can find the same approach used in [golang/appengine](https://github.com/golang/appengine):
+You can find the same approach used in [golang/appengine](https://github.com/golang/appengine/blob/v2.0.5/internal/api_common.go#L82):
 
 ```
 // internal/api_common.go

@@ -118,4 +118,4 @@ So far, my choises are:
 
 
 ## More references
-- https://github.com/auraphp/Aura.Filter - filtering and validation library from Aura project.
+- [filtering and validation library from Aura project](https://github.com/auraphp/Aura.Filter).

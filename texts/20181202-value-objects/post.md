@@ -4,7 +4,7 @@
 One of the best things happened to my code was using Value Objects (VOs). 
 
 > In computer science, a value object is a small object that represents a simple entity whose equality is not based on identity: i.e. two value objects are equal when they have the same value, not necessarily being the same object.
-https://en.wikipedia.org/wiki/Value_object
+[https://en.wikipedia.org/wiki/Value_object](https://en.wikipedia.org/wiki/Value_object)
 
 Value objects are used to represent some undividable concept through the app. Say, a customer address. Instead of throwing scalars between classes (which happens a lot in the wild) I throw VOs. When you receive a value object you don't need to validate it, it is valid by default. The other important trait of VOs is immutability. You can be 100% sure that an object that you passed to the external logic won't be altered, thus you gain both speed and durability.
 

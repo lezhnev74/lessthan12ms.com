@@ -126,4 +126,4 @@ the only thing they say is that the model should be UI independent and be not aw
 - [The JSP 0.92 Spec which coined Model1/2 terms](http://www.kirkdorffer.com/jspspecs/jsp092.html#model)
 - [Understanding JavaServer Pages Model 2 architecture](https://www.javaworld.com/article/2076557/understanding-javaserver-pages-model-2-architecture.html)
 - [The Model-View-Controller Design Pattern: `Model 2` JSP Development](http://ptgmedia.pearsoncmg.com/imprint_downloads/informit/chap2_0672324725.pdf)
-- https://struts.apache.org/primer.html
+- [Apache Struts](https://struts.apache.org/primer.html)

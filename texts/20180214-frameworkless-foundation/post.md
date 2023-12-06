@@ -96,7 +96,7 @@ Since we established a single gateway to handle exceptions, we definitely want t
 
 ## ⌨️ Practice time
 
-The repository is available here: https://github.com/lezhnev74/php-foundation
+[The repository is available here](https://github.com/lezhnev74/php-foundation)
 
 What I do now is creating booting procedures and put them to a file `bootstrap/start.php`.
 
@@ -182,7 +182,7 @@ Ok, this post is kind of messy. I hope provided links to repositories and genera
 - [YOUTUBE, Hexagonal Architecture - Message-Oriented Software Design](https://www.youtube.com/watch?v=K1EJBmwg9EQ&t=2s) by Mathias Noback
 - [Think frameworkless](https://lessthan12ms.com/think-frameworkless/)
 - Lists of packages to use:
-  - http://thephpleague.com/
-  - https://github.com/ziadoz/awesome-php
-  - https://github.com/lezhnev74/blank
+  - [http://thephpleague.com/](thephpleague.com)
+  - [https://github.com/ziadoz/awesome-php](github.com/ziadoz/awesome-php)
+  - [https://github.com/lezhnev74/blank](github.com/lezhnev74/blank)
   

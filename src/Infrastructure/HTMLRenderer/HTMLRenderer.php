@@ -14,18 +14,22 @@ use Textsite\Domain\MarkdownPost;
  */
 class HTMLRenderer
 {
-    /** @var MarkdownConverterInterface */
-    private $converter;
+    private MarkdownConverterInterface $converter;
 
-    public function __construct(MarkdownConverterInterface $converter) { $this->converter = $converter; }
+    public function __construct(MarkdownConverterInterface $converter)
+    {
+        $this->converter = $converter;
+    }
 
 
     public function render(MarkdownPost $post): string
     {
-        $html = $this->converter->convertToHtml($post->text());
+        $html = $post->text();
+//        $html = $this->makeStandaloneUrlsClickable($html);
+        $html = $this->converter->convertToHtml($html);
         [$html, $anchors] = $this->addAnchors($html);
-        if(!$post->page()) {
-            $html = $this->addTableContent($html,$anchors);
+        if (!$post->page()) {
+            $html = $this->addTableContent($html, $anchors);
         }
         return $html;
     }
@@ -71,8 +75,8 @@ class HTMLRenderer
 
         foreach ($anchors as $i => $a) {
             if (!$i) continue;
-            $off = ($a['level']-2) * 40;
-            $toc .= '<li style="margin-left:'.$off.'px;">' .
+            $off = ($a['level'] - 2) * 40;
+            $toc .= '<li style="margin-left:' . $off . 'px;">' .
                 '<a href="#' . $a['slug'] . '">' .
                 $a['title'] .
                 '</a></li>';
@@ -81,5 +85,18 @@ class HTMLRenderer
         $toc .= '</ul></div>';
 
         return (string)Stringy::create($html)->replace('</h1>', '</h1>' . $toc);
+    }
+
+    /**
+     * whenever there is a standalone link in the text, it is wrapped in an a-tag.
+     */
+    private function makeStandaloneUrlsClickable(string $html): string
+    {
+        $urlPattern = "/https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)/";
+        $html = preg_replace_callback($urlPattern, function (array $match) {
+            return sprintf('<a href="%s">%1$s</a>', $match[0]);
+        }, $html);
+
+        return $html;
     }
 }

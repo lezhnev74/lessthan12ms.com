@@ -102,8 +102,8 @@ that is why this playbook emerged. It is a process of making sure everyone on
 the team understands why these goals, ideas, and practices are there. Constant
 discussion of decisions we make in code for technical goals is a big deal.
 
-- https://martinfowler.com/bliki/DesignStaminaHypothesis.html
-- https://lessthan12ms.com/software-development-discipline.html
+- [DesignStaminaHypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)
+- [The Discipline Of Software Development](https://lessthan12ms.com/software-development-discipline.html)
 
 ## Supervised Onboarding
 
@@ -128,7 +128,7 @@ In a team with truly shared values and developed trust, everyone acts as one.
 And still, the formal responsibility of supervising the whole codebase can be
 imposed on someone to spot a moment when something goes south.
 
-https://blog.cleancoder.com/uncle-bob/2014/02/27/TheTrustSpectrum.html
+[https://blog.cleancoder.com/uncle-bob/2014/02/27/TheTrustSpectrum.html](https://blog.cleancoder.com/uncle-bob/2014/02/27/TheTrustSpectrum.html)
 
 ## Multi-phase code quality control
 
@@ -167,7 +167,7 @@ This helps us have our app in an always-deployable state, though for business
 needs deploy can be postponed and aligned to some event (but the branch is
 always ready for deployment).
 
-https://martinfowler.com/articles/continuousIntegration.html
+[https://martinfowler.com/articles/continuousIntegration.html](https://martinfowler.com/articles/continuousIntegration.html)
 
 ## TDD
 
@@ -196,7 +196,7 @@ not so much, we are nearly there.
 Code coverage may or may not be a goal in your team, but the design process
 itself is golden.
 
-https://blog.cleancoder.com/uncle-bob/2014/03/11/when-to-think.html
+[https://blog.cleancoder.com/uncle-bob/2014/03/11/when-to-think.html](https://blog.cleancoder.com/uncle-bob/2014/03/11/when-to-think.html)
 
 ## SOLID principles
 
@@ -216,7 +216,7 @@ data. While high-level code knows about the customer's life cycle and intents.
 They solve different problems using different tools and knowledge (see Clean
 Architecture below).
 
-https://martinfowler.com/articles/dipInTheWild.html
+[https://martinfowler.com/articles/dipInTheWild.html](https://martinfowler.com/articles/dipInTheWild.html)
 
 ## Hexagonal(Clean) Architecture
 
@@ -231,9 +231,9 @@ To manage this complexity we separate abstract (high-level) code from "details"
 our work and discussions, isolate tests and integrate high-level code with
 different low-level implementations.
 
-- https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-- https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/
-- https://alistair.cockburn.us/hexagonal-architecture/
+- [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+- [https://alistair.cockburn.us/hexagonal-architecture/](https://alistair.cockburn.us/hexagonal-architecture/)
 
 I often see a notable pattern in teams' design-making. Many minds have been
 deeply conditioned by relational databases and "data-centric" mental models,
@@ -248,7 +248,7 @@ the code "looks" very different. It is built around the user's intents like
 If we see CRUD-ish modeling in high-level code it means we likely miss important
 user intents and stories which means we are solving the wrong problem.
 
-https://verraes.net/2013/04/crud-is-an-anti-pattern/
+[https://verraes.net/2013/04/crud-is-an-anti-pattern/](https://verraes.net/2013/04/crud-is-an-anti-pattern/)
 
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
