@@ -3,6 +3,8 @@
 
 # Heaplog - Search For Local Log Files
 
+<img src="HeaplogScreenshot.png" style="max-width:400px;width:auto;">
+
 At work we have quite simple deployment setup - one huge server where all our services run as docker container.
 Logs are collected in a single folder. At some point we decided to have a solution for log search to help in debugging
 issues. And there this journey has begun.
@@ -11,7 +13,8 @@ We tried surprisingly many solutions just to find out that nothing works as seam
 which is too huge for our use-case, needs complex setup and resources. We tried some other solutions like graylog,
 eventually we settled on a regexp-based search app that does the job, but fails if files become bigger than a few Gb.
 I was deeply unsatisfied with this situation, how hard can it be to have a search for logs? I asked and turned out
-it was hard, especially if don't you know what you are doing. So I decided to understand this problem and design a search program.
+it was hard, especially if don't you know what you are doing. So I decided to understand this problem and design a
+search program.
 So here it is - [Heaplog](https://github.com/lezhnev74/heaplog).
 
 ## Design Exploration
@@ -101,6 +104,10 @@ the page seamlessly.
 
 After using it for a few days, it felt good as everything happens on the backend, but still certain skill must be
 developed to use the full potential of the tool.
+
+One notable feature is the Timeline at the right top. It proved to be a handy tool, it shows how matches spread across
+time. Also, you can use your mouse to zoom in to certain time window and inspect those messages. That helps with data
+exploration and debugging greatly.
 
 ## Conclusion
 
