@@ -33,6 +33,11 @@ A good night sleep and some caffeine (some people use Cola, but I prefer actual 
 
 ![](https://lessthan12ms.com/wp-content/uploads/2018/08/zend-04.jpg)
 
+## Sunset Of Zend Certification
+
+This year Zend seems to shut this program down. I keep my PDF and printed certificates,
+but unfortunately I lost my online page.
+
 ## References
 - [Zend certification programs](http://www.zend.com/en/services/certification)
 - [Lorna Jane's book](https://leanpub.com/zce)

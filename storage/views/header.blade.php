@@ -12,7 +12,6 @@
             <a href="https://www.zend-zce.com/en/yellow-pages/ZEND031138">Zend Certified Engineer</a><br>
             <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a>
             advocate<br>
-            👔 <a href="/on-demand-php-developer">On-Demand PHP Development</a>
         </div>
 
         <br><br>
