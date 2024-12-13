@@ -11,7 +11,7 @@
     @endif
 @endsection
 @section('footer')
-    <link rel="stylesheet" href="/js/highlight/styles/idea.css">
-    <script src="/js/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="/js/highlight/idea.css">
+    <script src="/js/highlight/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 @append

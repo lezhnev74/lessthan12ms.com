@@ -327,7 +327,7 @@ I hope that was useful to you!
 
 ## References
 
-- Gin HTTP server - https://gin-gonic.com/docs/introduction/)
-- Singleflight package - https://pkg.go.dev/golang.org/x/sync/singleflight
-- Rate limiter package - https://pkg.go.dev/golang.org/x/time/rate
-- Hey stress tool - https://github.com/rakyll/hey
+- Gin HTTP server - [https://gin-gonic.com/docs/introduction/](https://gin-gonic.com/docs/introduction/)
+- Singleflight package - [https://pkg.go.dev/golang.org/x/sync/singleflight](https://pkg.go.dev/golang.org/x/sync/singleflight)
+- Rate limiter package - [https://pkg.go.dev/golang.org/x/time/rate](https://pkg.go.dev/golang.org/x/time/rate)
+- Hey stress tool - [https://github.com/rakyll/hey](https://github.com/rakyll/hey)
