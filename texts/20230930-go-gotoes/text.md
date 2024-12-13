@@ -29,6 +29,7 @@
 - [2016 - Mat Ryer - Idiomatic Go Tricks](https://www.youtube.com/watch?v=yeetIgNeIkc)
 - [2017 - Building a Bank with Go by Matt Heath](https://www.youtube.com/watch?v=y2j_TB3NsRc)
 - [Bryan C. Mills - Rethinking Classical Concurrency Patterns](https://www.youtube.com/watch?v=5zXAHh5tJqQ)
+- [Dmitry Vyukov — Go scheduler: Implementing language with lightweight concurrency](https://www.youtube.com/watch?v=-K11rY57K7k&ab_channel=Hydra) - scheduling, memory organization and tons of details.
 
 ## Books
 
