@@ -8,3 +8,4 @@ tests/stub/web/*
 storage/cache/
 storage/log.log
 **/draft.md
+notes
