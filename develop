@@ -30,7 +30,7 @@ if [ $# -gt 0 ];then
         $COMPOSE run --service-ports --rm \
             -w /var/www \
             app \
-            php -S 0.0.0.0:80 -t ./web "$@"
+            php -dxdebug.remote_autostart=1 -S 0.0.0.0:80 -t ./web "$@"
 
     # If "test" is used, run unit tests,
     # pass-thru any extra arguments to phpunit
