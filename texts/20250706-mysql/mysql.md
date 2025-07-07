@@ -170,7 +170,7 @@ Physical copying usually much faster than logical, and mostly depends on the I/O
 The restore phase is dead simple - the tool copies the files back to the instance's `/var/lib/mysql` and then the
 instance can be run again.
 
-### Binlog Backup For No-Data-Loss
+### Binlog Backup For Almost-No-Data-Loss
 
 Logical or Physical backups produce a snapshot of the database at a point in time. Even if we take them every hour,
 still we can lose 1 hour worth of data in case of a sudden accident. If that is not acceptable, then what we can do is
@@ -179,12 +179,16 @@ constantly backup all changes that MySQL performs on the data.
 Binlog is a log of all modifications (in data and tables structure) performed by the database. MySQL can work without
 binlog enabled, but for us this feature is required (see `log_bin` config setting). The tool `mysqlbinlog` designed to
 work with binlog files. It can stream binlog changes to another safe location. In case of a crash our
-backup will contain all that it takes to restore all data with zero loss:
+backup will contain all that it takes to restore all data with zero loss (almost):
 
 1. First, restore the full backup—either physical or logical.
 2. Apply all changes from the binlog dated later than the restored copy.
 
 Operation is mostly manual, but straightforward. And depends on the skill of the database operator.
+
+Important note: binlog streaming to a safe location does not guarantee no-data-loss as backup is happening after 
+the fact of modification. It means that at the moment of the crash, some transactions could be still pending copying.
+The only true solution for zero-data-loss is sync or semi-sync replication.
 
 ## Backups, Backups, and Conclusion.
 
