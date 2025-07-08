@@ -21,7 +21,7 @@ I found out this "comparison" of different architecture styles (originally from 
 
 The latter approach basically says that your "application guts" should be isolated from your framework (Laravel or Rails) and should not be aware of it. 
 
-<a href="https://lessthan12ms.com/wp-content/uploads/2017/04/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg"><img src="https://lessthan12ms.com/wp-content/uploads/2017/04/CleanArchitecture-8b00a9d7e2543fa9ca76b81b05066629.jpg" alt="" width="772" height="567" class="aligncenter size-full wp-image-465" /></a>
+![](layers.jpg)
 
 See the arrows? They mean "aware of", so outer layer are aware of the inner layer, but not vice versa.
 
@@ -62,9 +62,9 @@ I started with splitting my app into 3 layers:
 
 * App
 * Infrastructure
-* and Doman
+* and Domain
 
-<a href="https://lessthan12ms.com/wp-content/uploads/2017/04/structure.jpg"><img src="https://lessthan12ms.com/wp-content/uploads/2017/04/structure.jpg" alt="" width="221" height="293" class="aligncenter size-full wp-image-484" /></a>
+![](structure.jpg)
 
 ### Domain layer
 
@@ -84,7 +84,7 @@ Here I put Doctrine implementations of different collections and finders.  This 
 ### PHP packages
 
 See composer.json for details. The is the overview:
-<a href="https://lessthan12ms.com/wp-content/uploads/2017/04/app.png"><img src="https://lessthan12ms.com/wp-content/uploads/2017/04/app.png" alt="" width="1000" height="1000" class="aligncenter size-full wp-image-490" /></a>
+![](app.png)
 
 ### My personal feelings about this app
 

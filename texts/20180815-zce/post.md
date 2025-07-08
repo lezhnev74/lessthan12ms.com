@@ -7,7 +7,7 @@
 - Yesterday [I have passed](https://www.zend-zce.com/en/yellow-pages/ZEND031138) the Zend Certified Engineer exam.
 - It took roughly a year for me to feel confident enough to actually take the exam.
 
-![](https://lessthan12ms.com/wp-content/uploads/2018/08/zend-05.jpg)
+![](zend-05.jpg)
 
 ## What I've learned
 I must say that I've been doing stuff with PHP for long years and I felt that I am good at it. But still, many PHP details and features were not discovered.
