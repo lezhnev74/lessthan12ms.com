@@ -3,6 +3,7 @@
 @section('post')
     <div class="post">
         <p class="date">{{$date}}</p>
+        @include('job_lookup')
         {!!$body!!}
     </div>
     <br><br>

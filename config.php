@@ -8,4 +8,5 @@ return [
     'texts_path' => env('TEXTS_PATH', base_path() . DIRECTORY_SEPARATOR . 'texts'),
     // Folder for the web root
     'webroot_path' => env('WEB_PATH', base_path() . DIRECTORY_SEPARATOR . 'web'),
+    'joob_lookup_banner' => env('JOB_LOOKUP_BANNER', false)
 ];
