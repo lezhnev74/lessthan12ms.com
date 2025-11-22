@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - .:/var/www:delegated
+    working_dir: /var/www
     ports:
       - "9005:9000"
     networks:
