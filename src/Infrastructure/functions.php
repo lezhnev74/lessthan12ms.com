@@ -14,9 +14,9 @@ function base_path() : string
 function container() : \Psr\Container\ContainerInterface
 {
     $builder = new \DI\ContainerBuilder();
-    $builder->useAnnotations(false);
+    $builder->useAttributes(false);
     $builder->useAutowiring(true);
-    if (env('APP_ENV') !== 'local') {
+    if (env('APP_ENV', 'local') !== 'local') {
         $builder->enableCompilation(base_path() . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'tmp');
     }
     $builder->addDefinitions(base_path() . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Infrastructure' . DIRECTORY_SEPARATOR . 'dependencies.php');
@@ -34,8 +34,8 @@ function env(string $key, $default = null)
 {
     static $variables;
 
-    $dotenv = Dotenv\Dotenv::create(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
-    $dotenv->load();
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
+    $dotenv->safeLoad();
 
     $value = getenv($key);
     if ($value === false) {

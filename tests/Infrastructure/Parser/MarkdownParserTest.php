@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Tests\Infrastructure\Parser;
 
 use Carbon\CarbonImmutable;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Textsite\Domain\Problems\PostMetaStructureIncorrect;
 use Textsite\Infrastructure\Parser\MarkdownParser;
@@ -13,7 +14,7 @@ class MarkdownParserTest extends TestCase
     /**
      * This data has valid post structure, but misses some important meta keys
      */
-    public function invalidMetaProvider(): array
+    public static function invalidMetaProvider(): array
     {
         return [
             [
@@ -48,9 +49,7 @@ POST
         ];
     }
 
-    /**
-     * @dataProvider invalidMetaProvider
-     */
+    #[DataProvider('invalidMetaProvider')]
     public function testItThrowsAnExceptionIfMetaMissesImportantInformation($text): void
     {
         $this->expectException(PostMetaStructureIncorrect::class);

@@ -1,8 +1,9 @@
 <?php
 
-use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Environment;
-use Webuni\CommonMark\AttributesExtension\AttributesExtension;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\Attributes\AttributesExtension;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\MarkdownConverter;
 
 return [
     \Slim\App::class => function (\Psr\Container\ContainerInterface $container) {
@@ -61,21 +62,22 @@ return [
         return new \Textsite\Infrastructure\HTTP\BladeRendererFactory(
             $c->get(\Textsite\Domain\Posts::class),
             $c->get(\Slim\App::class),
-            env('APP_ENV')
+            env('APP_ENV', 'local')
         );
     },
     \Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware::class => function () {
         return new \Textsite\Infrastructure\HTTP\Middleware\StaticCachedHtmlMiddleware(config('webroot_path'));
     },
     \League\CommonMark\MarkdownConverterInterface::class => function(){
-        $environment = Environment::createCommonMarkEnvironment();
-        $environment->addExtension(new AttributesExtension());
-        return new CommonMarkConverter([
+        $environment = new Environment([
             'renderer' => [
                 'block_separator' => "\n",
                 'inner_separator' => "\n",
                 'soft_break'      => "\n",
             ],
-        ], $environment);
+        ]);
+        $environment->addExtension(new CommonMarkCoreExtension());
+        $environment->addExtension(new AttributesExtension());
+        return new MarkdownConverter($environment);
     },
 ];

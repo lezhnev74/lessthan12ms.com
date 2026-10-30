@@ -10,6 +10,7 @@ Features:
 
 ## Locally
 - `./develop serve tests/Infrastructure/HTTP/router.php` to start a built in web server
+  (reachable on `http://localhost:$PORT`, where `PORT` comes from `.env`, default 80)
 - `./develop test` to run tests
 - `./develop composer update` to update dependencies
 

@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 namespace Tests\Infrastructure\Storage\Files;
 
-use Tests\Test;
+use Tests\TestCase;
 use Textsite\Infrastructure\Storage\Files\FilesPosts;
 
-class FilesPostsTest extends Test
+class FilesPostsTest extends TestCase
 {
     public function testGetAllPostsOrderByDate(): void
     {

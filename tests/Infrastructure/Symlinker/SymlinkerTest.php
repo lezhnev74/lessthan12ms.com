@@ -5,9 +5,9 @@ namespace Tests\Infrastructure\Symlinker;
 
 use Nyholm\Psr7\ServerRequest;
 use Slim\App;
-use Tests\Test;
+use Tests\TestCase;
 
-class SymlinkerTest extends Test
+class SymlinkerTest extends TestCase
 {
     public function testItUpdatesLocalLinksToSymlinks(): void
     {

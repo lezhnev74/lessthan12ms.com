@@ -6,7 +6,6 @@ namespace Textsite\Infrastructure\HTMLRenderer;
 
 use Cocur\Slugify\Slugify;
 use League\CommonMark\MarkdownConverterInterface;
-use Stringy\Stringy;
 use Textsite\Domain\MarkdownPost;
 
 /**
@@ -26,7 +25,7 @@ class HTMLRenderer
     {
         $html = $post->text();
 //        $html = $this->makeStandaloneUrlsClickable($html);
-        $html = $this->converter->convertToHtml($html);
+        $html = (string)$this->converter->convert($html);
         [$html, $anchors] = $this->addAnchors($html);
         if (!$post->page()) {
             $html = $this->addTableContent($html, $anchors);
@@ -84,7 +83,7 @@ class HTMLRenderer
 
         $toc .= '</ul></div>';
 
-        return (string)Stringy::create($html)->replace('</h1>', '</h1>' . $toc);
+        return str_replace('</h1>', '</h1>' . $toc, $html);
     }
 
     /**

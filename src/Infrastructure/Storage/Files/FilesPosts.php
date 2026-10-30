@@ -24,7 +24,7 @@ final class FilesPosts implements Posts
         $posts = array_filter($this->getAllPosts(), function (MarkdownPost $p) { return !$p->unlisted(); });
 
         usort($posts, function (MarkdownPost $a, MarkdownPost $b) {
-            return $a->publishDate()->lte($b->publishDate());
+            return $b->publishDate()->getTimestamp() <=> $a->publishDate()->getTimestamp();
         });
 
         return $posts;

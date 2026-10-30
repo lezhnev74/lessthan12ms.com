@@ -7,9 +7,9 @@ namespace Tests\Infrastructure\HTTP;
 
 use Nyholm\Psr7\ServerRequest;
 use Slim\App;
-use Tests\Test;
+use Tests\TestCase;
 
-class HTTPTest extends Test
+class HTTPTest extends TestCase
 {
     public function testItReturns404ForNonFoundPages(): void
     {

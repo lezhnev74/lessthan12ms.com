@@ -94,7 +94,7 @@ class Symlinker
             $linkRelativePath = relativePath($webLinkFolder, $linkFullPath);
 
             if (!file_exists($webLink)) {
-                `cd $webLinkFolder $webLinkFolder && ln -sr $linkRelativePath $webLink`;
+                symlink($linkRelativePath, $webLink);
             }
             $symlinks[$link] = DIRECTORY_SEPARATOR . relativePath($this->webrootPath, $webLink);
         }

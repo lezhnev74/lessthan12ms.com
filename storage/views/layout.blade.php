@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('pageTitle', $pageTitle)</title>
+    <title>@yield('pageTitle', 'Dmitriy Lezhnev')</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/simple-grid.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">

@@ -10,7 +10,17 @@
 
 # Create docker compose command to run
 COMPOSE="docker compose -f docker-compose.dev.yml"
-export $(cat .env | xargs) #load .env variables
+
+# Load variables from .env. Variables already present in the environment win,
+# which matches how docker compose itself resolves them.
+if [ -f .env ]; then
+    while IFS='=' read -r name value; do
+        case "$name" in ''|'#'*) continue ;; esac
+        [ -z "${!name+x}" ] && export "$name=$value"
+    done < .env
+fi
+
+PORT="${PORT:-80}"
 
 # If we pass any arguments...
 if [ $# -gt 0 ];then
@@ -24,13 +34,14 @@ if [ $# -gt 0 ];then
             composer "$@"
 
     # If "serve" is used, run built-in webserver,
-    # and expose it on the APP_PORT
+    # and expose it on the PORT from .env
     elif [ "$1" == "serve" ]; then
         shift 1
+        echo "Serving the site on http://localhost:${PORT} (inside the container PHP listens on :80)"
         $COMPOSE run --service-ports --rm \
             -w /var/www \
             app \
-            php -dxdebug.remote_autostart=1 -S 0.0.0.0:80 -t ./web "$@"
+            php -dxdebug.start_with_request=yes -S 0.0.0.0:80 -t ./web "$@"
 
     # If "test" is used, run unit tests,
     # pass-thru any extra arguments to phpunit
@@ -39,7 +50,7 @@ if [ $# -gt 0 ];then
         $COMPOSE run --rm \
             -w /var/www \
             app \
-            php -dxdebug.remote_autostart=1 ./vendor/bin/phpunit "$@" --testdox
+            php -dxdebug.start_with_request=yes ./vendor/bin/phpunit "$@" --testdox
 
     # If "php" is used, run php interpreter,
     # pass-thru any extra arguments to php

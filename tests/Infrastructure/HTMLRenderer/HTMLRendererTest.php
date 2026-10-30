@@ -4,8 +4,9 @@ declare(strict_types=1);
 namespace Tests\Infrastructure\HTMLRenderer;
 
 use Carbon\CarbonImmutable;
-use Monolog\Test\TestCase;
-use PHPHtmlParser\Dom;
+use DOMDocument;
+use DOMXPath;
+use PHPUnit\Framework\TestCase;
 use Textsite\Domain\MarkdownPost;
 use Textsite\Infrastructure\HTMLRenderer\HTMLRenderer;
 
@@ -52,11 +53,8 @@ MD;
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
-        // Assert 3 anchors added
-        $dom = new Dom();
-        $dom->load($html);
-        $anchors = $dom->find('a.anchor');
-        $this->assertEquals(3, $anchors->count());
+        $anchors = $this->loadHtml($html)->query('//a[@class="anchor"]');
+        $this->assertEquals(3, $anchors->length);
     }
 
     public function testItAddsTableOfContents(): void
@@ -74,15 +72,12 @@ MD;
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
-        // Assert ToC
-        $dom = new Dom();
-        $dom->load($html);
-        /** @var Dom\AbstractNode $toc */
-        $toc = $dom->find('#toc')[0];
-        $this->assertStringContainsString('Sub title', $toc->innerhtml);
-        $this->assertStringContainsString('Sub sub title', $toc->innerhtml);
-        $this->assertStringContainsString('Sub title 2', $toc->innerhtml);
-        $this->assertStringContainsString('Sub title 4', $toc->innerhtml);
+        $toc = $this->loadHtml($html)->query('//*[@id="toc"]')->item(0);
+        $this->assertNotNull($toc);
+        $this->assertStringContainsString('Sub title', $toc->textContent);
+        $this->assertStringContainsString('Sub sub title', $toc->textContent);
+        $this->assertStringContainsString('Sub title 2', $toc->textContent);
+        $this->assertStringContainsString('Sub title 4', $toc->textContent);
     }
 
     public function testItSkipsTableOfContentsForPages(): void
@@ -100,11 +95,14 @@ MD;
         $renderer = container()->get(HTMLRenderer::class);
         $html = $renderer->render($post);
 
-        // Assert ToC
-        $dom = new Dom();
-        $dom->load($html);
-        /** @var Dom\AbstractNode $toc */
-        $tocs = $dom->find('#toc');
-        $this->assertEmpty($tocs);
+        $tocs = $this->loadHtml($html)->query('//*[@id="toc"]');
+        $this->assertEquals(0, $tocs->length);
+    }
+
+    private function loadHtml(string $html): DOMXPath
+    {
+        $document = new DOMDocument();
+        $document->loadHTML($html, LIBXML_NOWARNING | LIBXML_NOERROR);
+        return new DOMXPath($document);
     }
 }

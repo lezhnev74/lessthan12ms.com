@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests;
 
 
-use Monolog\Test\TestCase;
+use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
-abstract class Test extends TestCase
+abstract class TestCase extends PHPUnitTestCase
 {
     protected string $webPath;
     protected string $postsPath;
@@ -27,6 +27,6 @@ abstract class Test extends TestCase
     {
         parent::tearDown();
 
-        `rm -rf $this->webPath/*`;
+        shell_exec('rm -rf ' . escapeshellarg($this->webPath) . DIRECTORY_SEPARATOR . '*');
     }
 }
