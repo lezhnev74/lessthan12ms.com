@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" role="img" aria-labelledby="title description">
+  <title id="title">A product with default capabilities and user customizations</title>
+  <desc id="description">A large blue product circle contains a small orange default capabilities circle and a larger green user's customizations circle.</desc>
+  <rect width="1000" height="800" fill="#ffffff"/>
+
+  <circle cx="500" cy="400" r="350" fill="#dae8fc" stroke="#6c8ebf" stroke-width="4"/>
+  <text x="500" y="135" text-anchor="middle" fill="#23425f" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Product</text>
+
+  <circle cx="350" cy="320" r="105" fill="#ffe6cc" stroke="#d79b00" stroke-width="4"/>
+  <text x="350" y="310" text-anchor="middle" fill="#6b4b00" font-family="Arial, Helvetica, sans-serif" font-size="25">Default</text>
+  <text x="350" y="344" text-anchor="middle" fill="#6b4b00" font-family="Arial, Helvetica, sans-serif" font-size="25">capabilities</text>
+
+  <circle cx="600" cy="480" r="190" fill="#d5e8d4" stroke="#82b366" stroke-width="4"/>
+  <text x="600" y="465" text-anchor="middle" fill="#274e2c" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">User's</text>
+  <text x="600" y="512" text-anchor="middle" fill="#274e2c" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">customizations</text>
+</svg>
